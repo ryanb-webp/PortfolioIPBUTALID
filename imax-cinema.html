@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/imax-cinema.css">
+  <link rel="stylesheet" href="CSS/header.css">
+  <link rel="stylesheet" href="CSS/footer.css">
+  <title>Imax</title>
+</head>
+<body>
+  <div class = "header"> <!--header-->
+      
+    <!--utility navigation-->
+
+    <div class = "utility-navigation">
+
+    <div class = "cordonbleu-logo"> <!--logo-->
+      <a href = "movie_page.html"><img src = "IMAGES/cordonbleu-logo.png" alt = "cordonbleu-logo"></a>
+    </div>
+
+    <div class = "search-bar"> <!--search bar-->
+        <input type="type" placeholder="Search movies here...">
+        <img src = "IMAGES/search-icon.png">
+    </div>
+
+    <div class = "shops"> <!--shops-->  
+        <a href = "signup-page.html">SHOPS</a>
+    </div>
+
+    <div class = "faqs"> <!--faqs-->
+        <a href = "faqs.html">FAQS</a>
+    </div>
+
+    <div class = "user-icon"> <!-- user icon-->  
+      <a href="signup-page.html"><i class="user-icon-image bi bi-person-circle"></i></a>
+    </div>
+    </div> 
+
+    <!--main navigation-->
+    <div class = "main-navigation">
+    <div class="dropdown"> 
+        <div class="main-navigation-button">
+        <a href = "movie_page.html">MOVIES</a>
+        <div class="dropdown-menu">
+            <div><a href = "movie-list-show.html">NOW SHOWING</a></div>
+            <div><a href = "movie-list-soon.html">COMING SOON</a></div>
+        </div>
+        </div>
+    </div>
+
+    <div class="dropdown"> 
+      <div class="main-navigation-button">
+        <a href = "cinema_location.html">CINEMA</a>
+        <div class="dropdown-menu">
+          <div><a href = "makati-movies.html">MAKATI</a></div>
+          <div><a href = "manila-movies.html">MANILA</a></div>
+          <div><a href = "qc-movies.html">QUEZON CITY</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dropdown"> 
+        <div class="main-navigation-button"><a href = "imax_final.html">IMAX</a></div>
+    </div>
+
+    <div class="dropdown"> 
+        <div class="main-navigation-button"><a href = "signup-page.html">CINEMA RENTAL</a></div>
+    </div>
+    
+    </div>
+  </div>
+
+  <div class="nav-container">
+    <div id="tix-nav" class="nav-link">
+      <a href="javascript:void(0);" onclick="showSection('tix')">TICKETS</a>
+    </div>
+    <div id="seat-nav" class="nav-link">
+      <a href="javascript:void(0);" onclick="showSection('seat')">SEAT</a>
+    </div>
+    <div id="details-nav" class="nav-link">
+      <a href="javascript:void(0);" onclick="showSection('details')">DETAILS</a>
+    </div>
+    <div id="payment-nav" class="nav-link">
+      <a href="javascript:void(0);" onclick="showSection('payment')">REVIEW AND PAY</a>
+    </div>
+  </div>
+
+  <div id="tix" class="content-section">
+    <div class="details">
+      <h2>THEATER LOCATION 1</h2>
+      <h1>MOVIE NAME</h1>
+      <h2>DATE</h2>
+    </div>
+    <section class="ticket">
+      <div class="ticket-container">
+        <h3>Select Tickets</h3>
+        <table border="1">
+          <tr>
+            <th>Ticket Type</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <td>Adult</td>
+            <td>
+              <div class="qty-container">
+                <button class="qty-btn">−</button>
+                <input type="text" class="qty-display" value="0" readonly>
+                <button class="qty-btn">+</button>
+              </div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Child/Senior</td>
+            <td>
+              <div class="qty-container">
+                <button class="qty-btn">−</button>
+                <input type="text" class="qty-display" value="0" readonly>
+                <button class="qty-btn">+</button>
+              </div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>VIP Adult</td>
+            <td>
+              <div class="qty-container">
+                <button class="qty-btn">−</button>
+                <input type="text" class="qty-display" value="0" readonly>
+                <button class="qty-btn">+</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>VIP Child/Senior</td>
+            <td>
+              <div class="qty-container">
+                <button class="qty-btn">−</button>
+                <input type="text" class="qty-display" value="0" readonly>
+                <button class="qty-btn">+</button>
+              </div>
+            </td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <div class="ticket-button">
+      <div class="previous-button"></div>
+      <div class="next-button">
+        <a href="javascript:void(0);" onclick="showSection('seat')"><button class="next-btn">NEXT</button></a>
+      </div>
+    </div>
+  </div>
+
+  <div id="seat" class="content-section" style="display: none;">
+    <div class="details">
+      <h2>THEATER LOCATION 1</h2>
+      <h1>MOVIE NAME</h1>
+      <h2>DATE</h2>
+    </div>
+
+    <div class="container">
+        <div class="cinema">
+            <div class="screen">SCREEN</div>
+                <div class="cinema-seat">
+                    <div class="seat">A1</div> <div class="seat">A2</div> <div class="seat">A3</div> <div class="seat">A4</div> <div class="seat">A5</div>
+                    <div class="seat">A6</div> <div class="seat">A7</div> <div class="seat">A8</div> <div class="seat">A9</div> <div class="seat">A10</div>
+                    <div class="seat">A11</div> <div class="seat">A12</div> <div class="seat">A13</div> <div class="seat">A14</div> <div class="seat">A15</div> <div class="seat">A16</div> <div class="seat">A17</div>
+                    <div class="seat">A18</div> <div class="seat">A19</div> <div class="seat">A20</div> <div class="seat">A21</div> <div class="seat">A22</div> <div class="seat">A23</div> <div class="seat">A24</div>
+                </div>
+                <div class="cinema-seat">
+                    <div class="seat">B1</div> <div class="seat">B2</div> <div class="seat">B3</div> <div class="seat">B4</div> <div class="seat">B5</div>
+                    <div class="seat">B6</div> <div class="seat">B7</div> <div class="seat">B8</div> <div class="seat">B9</div> <div class="seat">B10</div>
+                    <div class="seat">B11</div> <div class="seat">B12</div> <div class="seat">B13</div> <div class="seat">B14</div> <div class="seat">B15</div> <div class="seat">B16</div> <div class="seat">B17</div>
+                    <div class="seat">B18</div> <div class="seat">B19</div> <div class="seat">B20</div> <div class="seat">B21</div> <div class="seat">B22</div> <div class="seat">B23</div> <div class="seat">B24</div> <div class="seat">B25</div> <div class="seat">B26</div>
+                </div>
+                <div class="cinema-seat">
+                    <div class="seat">C1</div> <div class="seat">C2</div> <div class="seat">C3</div> <div class="seat">C4</div> <div class="seat">C5</div>
+                    <div class="seat">C6</div> <div class="seat">C7</div> <div class="seat">C8</div> <div class="seat">C9</div> <div class="seat">C10</div>
+                    <div class="seat">C11</div> <div class="seat">C12</div> <div class="seat">C13</div> <div class="seat">C14</div> <div class="seat">C15</div> 
+                    <div class="seat">C16</div> <div class="seat">C17</div> <div class="seat">C18</div> <div class="seat">C19</div> <div class="seat">C20</div>
+                    <div class="seat">C21</div> <div class="seat">C22</div> <div class="seat">C23</div> <div class="seat">C24</div> <div class="seat">C25</div>
+                    <div class="seat">C26</div>
+                </div>
+
+                <br><br><br>
+
+                <div class="cinema-seat">
+                    <div class="seat">D1</div> <div class="seat">D2</div> <div class="seat">D3</div> <div class="seat">D4</div> <div class="seat">D5</div>
+                    <div class="seat">D6</div> <div class="seat">D7</div> <div class="seat">D8</div> <div class="seat">D9</div> <div class="seat">D10</div>
+                    <div class="seat">D11</div> <div class="seat">D12</div> <div class="seat">D13</div> <div class="seat">D14</div> <div class="seat">D15</div> 
+                    <div class="seat">D16</div> <div class="seat">D17</div> <div class="seat">D18</div> <div class="seat">D19</div> <div class="seat">D20</div>
+                    <div class="seat">D21</div> <div class="seat">D22</div> <div class="seat">D23</div> <div class="seat">D24</div> <div class="seat">D25</div>
+                    <div class="seat">D26</div> <div class="seat">D27</div> <div class="seat">D28</div> <div class="seat">D29</div> <div class="seat">D30</div>
+                </div>
+                <div class="cinema-seat">
+                    <div class="seat">E1</div> <div class="seat">E2</div> <div class="seat">E3</div> <div class="seat">E4</div> <div class="seat">E5</div>
+                    <div class="seat">E6</div> <div class="seat">E7</div> <div class="seat">E8</div> <div class="seat">E9</div> <div class="seat">E10</div>
+                    <div class="seat">E11</div> <div class="seat">E12</div> <div class="seat">E13</div> <div class="seat">E14</div> <div class="seat">E15</div> 
+                    <div class="seat">E16</div> <div class="seat">E17</div> <div class="seat">E18</div> <div class="seat">E19</div> <div class="seat">E20</div>
+                    <div class="seat">E21</div> <div class="seat">E22</div> <div class="seat">E23</div> <div class="seat">E24</div> <div class="seat">E25</div>
+                    <div class="seat">E26</div> <div class="seat">E27</div> <div class="seat">E28</div> <div class="seat">E29</div> <div class="seat">E30</div>
+                </div>
+                <div class="cinema-seat">
+                    <div class="seat">F1</div> <div class="seat">F2</div> <div class="seat">F3</div> <div class="seat">F4</div> <div class="seat">F5</div>
+                    <div class="seat">F6</div> <div class="seat">F7</div> <div class="seat">F8</div> <div class="seat">F9</div> <div class="seat">F10</div>
+                    <div class="seat">F11</div> <div class="seat">F12</div> <div class="seat">F13</div> <div class="seat">F14</div> <div class="seat">F15</div> 
+                    <div class="seat">F16</div> <div class="seat">F17</div> <div class="seat">F18</div> <div class="seat">F19</div> <div class="seat">F20</div>
+                    <div class="seat">F21</div> <div class="seat">F22</div> <div class="seat">F23</div> <div class="seat">F24</div> <div class="seat">F25</div>
+                    <div class="seat">F26</div> <div class="seat">F27</div> <div class="seat">F28</div> <div class="seat">F29</div> <div class="seat">F30</div>
+                </div>
+                <div class="cinema-seat">
+                    <div class="seat">G1</div> <div class="seat">G2</div> <div class="seat">G3</div> <div class="seat">G4</div> <div class="seat">G5</div>
+                    <div class="seat">G6</div> <div class="seat">G7</div> <div class="seat">G8</div> <div class="seat">G9</div> <div class="seat">G10</div>
+                    <div class="seat">G11</div> <div class="seat">G12</div> <div class="seat">G13</div> <div class="seat">G14</div> <div class="seat">G15</div> 
+                    <div class="seat">G16</div> <div class="seat">G17</div> <div class="seat">G18</div> <div class="seat">G19</div> <div class="seat">G20</div>
+                    <div class="seat">G21</div> <div class="seat">G22</div> <div class="seat">G23</div> <div class="seat">G24</div> <div class="seat">G25</div>
+                    <div class="seat">G26</div> <div class="seat">G27</div> <div class="seat">G28</div> <div class="seat">G29</div> <div class="seat">G30</div>
+                </div>
+                <div class="cinema-seat">
+                    <div class="seat">H1</div> <div class="seat">H2</div> <div class="seat">H3</div> <div class="seat">H4</div> <div class="seat">H5</div>
+                    <div class="seat">H6</div> <div class="seat">H7</div> <div class="seat">H8</div> <div class="seat">H9</div> <div class="seat">H10</div>
+                    <div class="seat">H11</div> <div class="seat">H12</div> <div class="seat">H13</div> <div class="seat">H14</div> <div class="seat">H15</div> 
+                    <div class="seat">H16</div> <div class="seat">H17</div> <div class="seat">H18</div> <div class="seat">H19</div> <div class="seat">H20</div>
+                    <div class="seat">H21</div> <div class="seat">H22</div> <div class="seat">H23</div> <div class="seat">H24</div> <div class="seat">H25</div>
+                    <div class="seat">H26</div> <div class="seat">H27</div> <div class="seat">H28</div> <div class="seat">H29</div> <div class="seat">H30</div>
+                </div>
+                <div class="cinema-seat">
+                    <div class="seat">I1</div> <div class="seat">I2</div> <div class="seat">I3</div> <div class="seat">I4</div> <div class="seat">I5</div>
+                    <div class="seat">I6</div> <div class="seat">I7</div> <div class="seat">I8</div> <div class="seat">I9</div> <div class="seat">I10</div>
+                    <div class="seat">I11</div> <div class="seat">I12</div> <div class="seat">I13</div> <div class="seat">I14</div> <div class="seat">I15</div> <div class="seat">I16</div> <div class="seat">I17</div>
+                    <div class="seat">I18</div> <div class="seat">I19</div> <div class="seat">I20</div> <div class="seat">I21</div> <div class="seat">I22</div> <div class="seat">I23</div> <div class="seat">I24</div> <div class="seat">I25</div> <div class="seat">I26</div> <div class="seat">I27</div> <div class="seat">I28</div> <div class="seat">I29</div> <div class="seat">I30</div>
+                    <div class="seat">I31</div> <div class="seat">I32</div> <div class="seat">I33</div> <div class="seat">I34</div> <div class="seat">I35</div> <div class="seat">I36</div>
+                </div>
+                <div class="cinema-seat">
+                    <div class="seat">J1</div> <div class="seat">J2</div> <div class="seat">J3</div> <div class="seat">J4</div> <div class="seat">J5</div>
+                    <div class="seat">J6</div> <div class="seat">J7</div> <div class="seat">J8</div> <div class="seat">J9</div> <div class="seat">J10</div>
+                    <div class="seat">J11</div> <div class="seat">J12</div> <div class="seat">J13</div> <div class="seat">J14</div> <div class="seat">J15</div> <div class="seat">J16</div> <div class="seat">J17</div>
+                    <div class="seat">J18</div> <div class="seat">J19</div> <div class="seat">J20</div> <div class="seat">J21</div> <div class="seat">J22</div> <div class="seat">J23</div> <div class="seat">J24</div> <div class="seat">J25</div> <div class="seat">J26</div> <div class="seat">J27</div> <div class="seat">J28</div> <div class="seat">J29</div> <div class="seat">J30</div>
+                    <div class="seat">J31</div> <div class="seat">J32</div> <div class="seat">J33</div> <div class="seat">J34</div> <div class="seat">J35</div> <div class="seat">J36</div>
+                </div>
+                <div class="cinema-seat">
+                    <div class="seat">K1</div> <div class="seat">K2</div> <div class="seat">K3</div> <div class="seat">K4</div> <div class="seat">K5</div>
+                    <div class="seat">K6</div> <div class="seat">K7</div> <div class="seat">K8</div> <div class="seat">K9</div> <div class="seat">K10</div>
+                    <div class="seat">K11</div> <div class="seat">K12</div> <div class="seat">K13</div> <div class="seat">K14</div> <div class="seat">K15</div> <div class="seat">K16</div> <div class="seat">K17</div>
+                    <div class="seat">K18</div> <div class="seat">K19</div> <div class="seat">K20</div> <div class="seat">K21</div> <div class="seat">K22</div> <div class="seat">K23</div> <div class="seat">K24</div> <div class="seat">K25</div> <div class="seat">K26</div> <div class="seat">K27</div> <div class="seat">K28</div> <div class="seat">K29</div> <div class="seat">K30</div>
+                    <div class="seat">K31</div> <div class="seat">K32</div> <div class="seat">K33</div> <div class="seat">K34</div> <div class="seat">K35</div> <div class="seat">K36</div>
+                </div>
+                <div class="cinema-seat">
+                    <div class="seat">L1</div> <div class="seat">L2</div> <div class="seat">L3</div> <div class="seat">L4</div> <div class="seat">L5</div>
+                    <div class="seat">L6</div> <div class="seat">L7</div> <div class="seat">L8</div> <div class="seat">L9</div> <div class="seat">L10</div>
+                    <div class="seat">L11</div> <div class="seat">L12</div> <div class="seat">L13</div> <div class="seat">L14</div> <div class="seat">L15</div> <div class="seat">L16</div> <div class="seat">L17</div>
+                    <div class="seat">L18</div> <div class="seat">L19</div> <div class="seat">L20</div> <div class="seat">L21</div> <div class="seat">L22</div> <div class="seat">L23</div> <div class="seat">L24</div> <div class="seat">L25</div> <div class="seat">L26</div> <div class="seat">L27</div> <div class="seat">L28</div> <div class="seat">L29</div> <div class="seat">L30</div>
+                    <div class="seat">L31</div> <div class="seat">L32</div> <div class="seat">L33</div> <div class="seat">L34</div> <div class="seat">L35</div> <div class="seat">L36</div>
+                </div>
+                <div class="cinema-seat">
+                    <div class="seat">M1</div> <div class="seat">M2</div> <div class="seat">M3</div> <div class="seat">M4</div> <div class="seat">M5</div>
+                    <div class="seat">M6</div> <div class="seat">M7</div> <div class="seat">M8</div> <div class="seat">M9</div> <div class="seat">M10</div>
+                    <div class="seat">M11</div> <div class="seat">M12</div> <div class="seat">M13</div> <div class="seat">M14</div> <div class="seat">M15</div> <div class="seat">M16</div> <div class="seat">M17</div>
+                    <div class="seat">M18</div> <div class="seat">M19</div> <div class="seat">M20</div> <div class="seat">M21</div> <div class="seat">M22</div> <div class="seat">M23</div> <div class="seat">M24</div> <div class="seat">M25</div> <div class="seat">M26</div> <div class="seat">M27</div> <div class="seat">M28</div> <div class="seat">M29</div> <div class="seat">M30</div>
+                    <div class="seat">M31</div> <div class="seat">M32</div> <div class="seat">M33</div> <div class="seat">M34</div> <div class="seat">M35</div> <div class="seat">M36</div>
+                </div>
+                <div class="cinema-seat">
+                    <div class="seat">N1</div> <div class="seat">N2</div> <div class="seat">N3</div> <div class="seat">N4</div> <div class="seat">N5</div>
+                    <div class="seat">N6</div> <div class="seat">N7</div> <div class="seat">N8</div> <div class="seat">N9</div> <div class="seat">N10</div>
+                    <div class="seat">N11</div> <div class="seat">N12</div> <div class="seat">N13</div> <div class="seat">N14</div> <div class="seat">N15</div> <div class="seat">N16</div> <div class="seat">N17</div>
+                    <div class="seat">N18</div> <div class="seat">N19</div> <div class="seat">N20</div> <div class="seat">N21</div> <div class="seat">N22</div> <div class="seat">N23</div> <div class="seat">N24</div> <div class="seat">N25</div> <div class="seat">N26</div> <div class="seat">N27</div> <div class="seat">N28</div> <div class="seat">N29</div> <div class="seat">N30</div>
+                    <div class="seat">N31</div> <div class="seat">N32</div> <div class="seat">N33</div> <div class="seat">N34</div> 
+                </div>
+            </div>  
+        </div>
+        <div class="ticket-button">
+            <div class="previous-button">
+              <a href="javascript:void(0);" onclick="showSection('tix')"><button class="previous-btn">PREVIOUS</button></a>
+            </div>
+            <div class="next-button">
+              <a href="javascript:void(0);" onclick="showSection('details')"><button class="next-btn">NEXT</button></a>
+            </div>
+          </div>
+    </div>
+      
+  <div id="details" class="content-section" style="display: none;">
+    <div class="details">
+      <h2>THEATER LOCATION 1</h2>
+      <h1>MOVIE NAME</h1>
+      <h2>DATE</h2>
+    </div>
+
+    <div class="personal-details">
+      <div class="personal-details-table">
+        <table>
+          <tr>
+            <th colspan="2" style="font-size: 25px;">PERSONAL DETAILS</th>
+          </tr>
+          <tr>
+            <td><label for="name">NAME</label></td>
+            <td><input type="text" placeholder="e.g., Juan de la Cruz"></td>
+        </tr>
+        <tr>
+            <td><label for="phone">PHONE NO</label></td>
+            <td><input type="tel" placeholder="+63 912 345 6789"></td>
+        </tr>
+        <tr>
+            <td><label for="email">EMAIL</label></td>
+            <td><input type="email" placeholder="example@gmail.com"></td>
+        </tr>
+        <tr>
+            <td><label for="confirm-email">CONFIRM EMAIL</label></td>
+            <td><input type="email"></td>
+        </tr>
+        </table>
+      </div>
+    </div>
+    <div class="ticket-button">
+      <div class="previous-button">
+        <a href="javascript:void(0);" onclick="showSection('seat')"><button class="previous-btn">PREVIOUS</button></a>
+      </div>
+      <div class="next-button">
+        <a href="javascript:void(0);" onclick="showSection('payment')"><button class="next-btn">PROCEED TO PAYMENT</button></a>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="payment" class="content-section" style="display: none;">
+    <div class="payment-review">
+      <div class="confirmation">
+        <h1>PAYMENT CONFIRMED!</h1>
+        <p>Your payment has been successfully processed.</p>
+        <p>Thank you for booking with us! We look forward to seeing you at the cinema.</p>
+      </div>
+    </div>
+    <div class="ticket-button">
+      <div class="previous-button">
+        <a href="javascript:void(0);" onclick="showSection('details')"><button class="previous-btn">PREVIOUS</button></a>
+      </div>
+      <div class="next-button"></div>
+    </div>
+  </div>
+
+  <script>
+    // Function to switch between sections
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.content-section');
+      sections.forEach(section => {
+        section.style.display = 'none'; // Hide all sections
+      });
+
+      const selectedSection = document.getElementById(sectionId);
+      selectedSection.style.display = 'block'; // Show the selected section
+    }
+
+    // Initially show the 'tix' section
+    document.addEventListener('DOMContentLoaded', () => {
+      showSection('tix');
+    });
+  </script>
+
+    <!--footer-->
+    <div class = "footer"> <!--footer element \copy from here-->
+
+      <div class = "socials">
+
+        <div class = "instagram">
+          <a href="https://www.instagram.com/cordonbleucinemas/" target="_blank">
+            <img src="IMAGES/instagram-icon.png" alt="instagram-icon">
+          </a>
+        </div>
+
+        <div class = "facebook">
+          <a href="https://www.facebook.com/people/Cordon-Bleu-Cinemas/61576837260520/" target="_blank">
+            <img src = "IMAGES/facebook-icon.png" alt = "facebook-icon">
+          </a>
+        </div>
+
+        <div class = "x">
+          <a href="https://x.com/cordonbcinemas" target="_blank">
+            <img src = "IMAGES/x-icon.png" alt = "x-icon">
+          </a>
+        </div>
+
+        <div class = "youtube">
+          <a href="https://www.youtube.com/@CordonBleuCinemas" target="_blank">
+            <img src = "IMAGES/youtube-icon.png" alt = "youtube-icon">
+          </a>
+        </div>
+
+        <div class = "tiktok">
+          <a href="https://www.tiktok.com/@cordonbleucinemas" target="_blank">
+            <img src = "IMAGES/tiktok-icon.png" alt = "tiktok-icon">
+          </a>
+        </div>
+
+      </div>
+  
+      <div class = "footer-contents">
+  
+        <div>
+          <div class = "about">
+            <a href="#">ABOUT US</a>
+          </div>
+          <div class = "termsandconditions">
+            <a href="#">TERMS AND CONDITIONS</a>
+          </div>
+          <div class = "privacy policy">
+            <a href="#">PRIVACY POLICY</a>
+          </div>
+        </div>
+  
+        <div>
+          <div class = "cordonbleu-logo-footer">
+            <img src = "IMAGES/cordonbleu-logo.png">
+          </div>
+          <div class = "address">
+            <p>WE MAKE YOUR EVERY EXPERIENCE FIRST-CLASS</p>
+          </div>
+        </div>
+  
+        <div>
+          <div><a href="movie-list-soon.html">FILMS COMING SOON</a></div>
+          <div><a href="movie-list-show.html">FILMS NOW SHOWING</a></div>
+          <div><a href="imax_final.html">IMAX</a></div>
+          <div><a href="vip-movies.html">VIP</a></div>
+        </div>
+  
+      </div>
+  
+      <div class = "copyright">
+        <div>
+          <p>&copy; 2025 Cordon Bleu Cinemas</p>
+        </div>
+      </div>
+  
+    </div>
+</body>
+</html>

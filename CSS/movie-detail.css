@@ -1,0 +1,673 @@
+.cont
+{
+    position: relative;
+    width: 99vw;
+    height: 100vh;
+    margin: 12vh 0 0 0;
+    overflow-x: hidden;
+}
+
+.bg-image
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    opacity: 0.5;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    z-index: -1;
+}
+
+a
+{
+    color: white;
+}
+
+hr
+{
+    margin: 20px 0;
+}
+.movie-cont
+{
+    flex-wrap: wrap;
+    max-width: 1200px;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    flex-direction: row;
+    color: white;
+}
+
+.movie img
+{
+    padding: 50px 20px 0 0;
+    width: 290px;
+}
+
+.detail
+{
+    padding: 20px;
+    line-height: 2;
+}
+
+.title
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.title h1
+{
+    line-height: 2;
+}
+.pg-label 
+{
+    background: linear-gradient(to right, black, blue);
+    color: white;
+    padding: 1px 15px;
+    max-width: 50px;
+    height: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+
+}
+
+.genre
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    width: 500px;
+    line-height: 2rem;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.box
+{
+    border-radius: 40px;
+    border: 1px solid  rgba(255, 255, 255, 0.737);
+    padding: 0 10px 0 10px;
+    max-width: 100px;
+    max-height: 40px;
+    text-align: center;
+    transition: background 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.box:hover
+{
+    background:  rgba(255, 255, 255, 0.269);
+}
+
+.description
+{
+    max-width: 700px;
+    font-size: 0.9rem;
+}
+
+.info
+{
+    font-size: 0.7rem;
+}
+
+.trailer
+{
+    margin-top: 10px;
+}
+
+.modal 
+{
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.active 
+{
+    display: flex; 
+}
+
+.modal-content 
+{
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.modal-content iframe 
+{
+    display: block;
+    width: 60vw;
+    height: 35vw;
+}
+
+.close 
+{
+    position: absolute;
+    top: -24px;
+    right: -30px;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px 0 5px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 40px;
+}
+
+@media (max-width: 760px)
+{
+    .movie-cont
+    {
+        width: 10px;
+    }
+    .movie img
+    {
+        padding: 40px 0 0 0;
+    }
+    .detail
+    {
+        text-align: center;
+    }
+    .title
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    .genre
+    {
+        justify-content: center;
+        width: 300px;
+    }
+    .trailer
+    {
+        justify-self: center;
+    }
+} 
+
+
+
+
+.sched-cont
+{
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    padding: 20px 0;
+}
+.date
+{
+    padding: 20px 0 0 0;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(7, 1fr);
+    justify-items: center;
+    gap: 1px;
+}
+.date p
+{
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.date-box
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    gap: 10px;
+    justify-content: center;
+}
+
+.date-box1
+{
+    border: 2px solid #443fac;
+    border-radius: 15px;
+    background-color: #443fac;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 0 5px 0 5px;
+    width: auto;
+    height: 28px;
+}
+
+.date-box2
+{
+    border: 2px solid white;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    width: 70px;
+    transition: background 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.date-box2:hover
+{
+    background:  rgb(255, 255, 255);
+    color: black;
+}
+
+.date .day
+{
+    color: #6e67f8;
+}
+
+.schedule
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.loc-select
+{
+    color: white;
+    margin-left: 40px;
+    max-width: 400px;
+    margin-top: 5px;
+}
+
+select.loc-box
+{
+    appearance: none;
+    font-size: 13px;
+    background-color: transparent;
+    width: 160px;
+    height: 40px;
+    border: 2px solid #ffffff;
+    color: white;
+    border-radius: 18px;
+    padding: 0 0 0 20px;
+    cursor: pointer;
+}
+
+option
+{
+    background: #090934;
+    color: white;
+}
+
+
+@media (max-width: 700px)
+{
+    .date
+    {
+        margin-top: 20px;
+        border: 1px solid #edecff;
+        max-width: 90vw;
+        overflow-x: auto;
+        padding-bottom: 20px;
+    }
+}
+
+/*
+a
+{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.715);
+}
+
+.movie
+{
+    display: flex;
+    flex-direction: row;
+    margin: 1% 10% 1% 7%;
+    z-index: 1;
+    top: 50px;
+    left: 0px;
+    max-height: 40vw;
+}
+
+
+.movie img
+{
+    max-width: 700px;
+    max-height: 500px;
+    border-radius: 10px;
+    margin: 10vh 40px 0 0;
+}
+
+
+
+
+.details
+{
+    margin-top: 10vh;
+    width: 50vw;
+    line-height: 2rem;
+}
+
+.title h1
+{
+    color: white;
+    font-size: 2.5rem;
+    margin-right: 20px;
+    line-height: 45px;
+}
+
+.details p
+{
+    color: rgba(255, 255, 255, 0.737);
+    font-size: 1rem;
+    font-weight: normal;
+    min-height: 1vh;
+}
+
+.title
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.pg-label 
+{
+    background: linear-gradient(to right, black, blue);
+    color: white;
+    padding: 1px 15px;
+    height: 35px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.genre
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    width: 50vw;
+    line-height: 2rem;
+    flex-wrap: wrap;
+}
+
+.box
+{
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 40px;
+    border: 1px solid  rgba(255, 255, 255, 0.737);
+    padding: 0 10px 0 10px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    transition: background 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.box:hover
+{
+    background:  rgba(255, 255, 255, 0.269);
+}
+
+.description
+{
+    margin-top: 20px;
+    width: 55vw;
+    text-align: justify;
+}
+
+.description p
+{
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.801);
+}
+
+.info p
+{
+    font-size: 0.8rem;
+    line-height: 25px;
+}
+
+hr
+{
+    opacity: 0.5;
+    margin: 15px 0 15px 0;
+}
+
+.trailer
+{
+    margin-top: 17px;
+    width: 170px;
+    cursor: pointer;
+}
+
+.trailer .box
+{
+    background: white;
+    transition: transform 0.3s ease;
+    color: black;
+}
+
+.trailer .box:hover
+{
+   transform: scale(0.95);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* MODAL 
+
+.modal 
+{
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.active 
+{
+    display: flex; 
+}
+
+.modal-content 
+{
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.modal-content iframe 
+{
+    display: block;
+    width: 60vw;
+    height: 35vw;
+}
+
+.close 
+{
+    position: absolute;
+    top: -24px;
+    right: -30px;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px 0 5px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Dates
+
+.section
+{
+    display: block;
+    margin: 1% 10% 1% 10%;
+    z-index: 1;
+    top: 20px;
+    left: 10px;
+    width: 70vw;
+}
+
+.date
+{
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(7, 11.3vw);
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    gap: 1px;
+}
+
+.section h1
+{
+    color: white;
+    font-size: 40px;
+    margin-left: 10px;
+    margin-bottom: 40px;
+}
+
+.date p
+{
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.date-box
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    gap: 10px;
+    justify-content: center;
+}
+
+.date-box1
+{
+    border: 2px solid #443fac;
+    border-radius: 15px;
+    background-color: #443fac;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 0 5px 0 5px;
+    width: auto;
+    height: 28px;
+}
+
+.date-box2
+{
+    border: 2px solid white;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    width: 70px;
+    transition: background 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.date-box2:hover
+{
+    background:  rgb(255, 255, 255);
+    color: black;
+}
+
+.date .day
+{
+    color: #6e67f8;
+}
+
+.schedule
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.loc-select
+{
+    color: white;
+    margin-left: 40px;
+    max-width: 400px;
+    margin-top: 11px;
+}
+
+select.loc-box
+{
+    appearance: none;
+    font-size: 16px;
+    background-color: transparent;
+    width: 160px;
+    height: 40px;
+    border: 2px solid #ffffff;
+    color: white;
+    border-radius: 18px;
+    padding: 0 0 0 20px;
+    cursor: pointer;
+}
+
+.loc-select::after
+{
+    content: '⏷';
+    color: white;
+    font-size: 15px;
+    position: relative;
+    right: 40px;
+    pointer-events: none; 
+}
+
+option
+{
+    background: #090934;
+    color: white;
+}
+
+
+@media (max-width: 500px)
+{
+    .movie img
+    {
+        width: 65vw;
+        height: 90vw;
+
+    }
+    .movie
+    {
+        flex-direction: column;
+    }
+    .details
+    {
+        margin-top: 20px;
+    }
+    
+}
+
+footer
+{
+    align-self: flex-end;
+}
+*/

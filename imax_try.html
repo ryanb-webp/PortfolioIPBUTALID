@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel = "stylesheet" href = "CSS/footer.css">
+  <link rel = "stylesheet" href = "CSS/header.css">
+  <link rel = "stylesheet" href = "CSS/imax_try.css"> <!--please refer to the name of your css file-->
+  <title>IMAX</title>
+</head>
+<body>
+  <div class = "header"> <!--header-->
+      
+    <!--utility navigation-->
+
+    <div class = "utility-navigation">
+
+    <div class = "cordonbleu-logo"> <!--logo-->
+        <a href = "index.html"><img src = "IMAGES/cordonbleu-logo.png" alt = "cordonbleu-logo"></a>
+    </div>
+
+    <div class = "search-bar"> <!--search bar-->
+        <input type="type" placeholder="Search movies here...">
+        <img src = "IMAGES/search-icon.png">
+    </div>
+
+    <div class = "shops"> <!--shops-->  
+        <a href = "signup-page.html">SHOPS</a>
+    </div>
+
+    <div class = "faqs"> <!--faqs-->
+        <a href = "faqs.html">FAQS</a>
+    </div>
+
+    <div class = "user-icon"> <!-- user icon-->  
+      <a href="signup-page.html"><i class="user-icon-image bi bi-person-circle"></i></a>
+    </div>
+    </div> 
+
+    <!--main navigation-->
+    <div class = "main-navigation">
+    <div class="dropdown"> 
+        <div class="main-navigation-button">
+        <a href = "index.html">MOVIES</a>
+        <div class="dropdown-menu">
+            <div><a href = "movie-list-show.html">NOW SHOWING</a></div>
+            <div><a href = "movie-list-soon.html">COMING SOON</a></div>
+        </div>
+        </div>
+    </div>
+
+    <div class="dropdown"> 
+      <div class="main-navigation-button">
+        <a href = "cinema_location.html">CINEMA</a>
+        <div class="dropdown-menu">
+          <div><a href = "makati-movies.html">MAKATI</a></div>
+          <div><a href = "manila-movies.html">MANILA</a></div>
+          <div><a href = "qc-movies.html">QUEZON CITY</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dropdown"> 
+        <div class="main-navigation-button"><a href = "imax_final.html">IMAX</a></div>
+    </div>
+
+    <div class="dropdown"> 
+        <div class="main-navigation-button"><a href = "signup-page.html">CINEMA RENTAL</a></div>
+    </div>
+    
+    </div>
+  </div>
+
+  <div class="mobile">
+  <div class="homepage-container mobile">
+    <div class="container">
+        <div class="hero-text">
+          <h1>Experience the Unseen</h1>
+          <h1>Feel the IMAX Thrill!</h1>
+            <p>at Cordonbleu Cinemas</p>
+        </div>
+        <div class = "hero-banner">
+          <img src="IMAGES\imax-banner.webp" alt="Hero Banner" class="hero-banner">
+        </div>
+    </div>
+  </div>
+</div>
+
+  <div class="now-showing">
+    <h1>NOW SHOWING</h1>
+  </div>
+
+<div class="carousel">
+  <div class="carousel-wrapper">
+    <div class="carousel-item carousel-item-left">
+      <div class="poster-container">
+        <img src="IMAGES/snow white poster.jpg" alt="Snow White 2025">
+        <div class="pg-label">PG</div>
+      </div>
+    </div>
+    <div class="carousel-item carousel-item-leftmost">
+      <div class="poster-container">
+        <img src="IMAGES/minecraft movie poster.jpg" alt = "Minecraft Movie 2025">
+        <div class="pg-label">PG</div>
+      </div>
+    </div>
+    <div class="carousel-item carousel-item-center">
+      <div class="poster-container">
+        <img src = "IMAGES/ne zha.webp" alt = "Ne zha 2">
+        <div class="pg-label">PG</div>
+      </div>
+    </div>
+    <div class="carousel-item carousel-item-right">
+      <div class="poster-container">
+        <img src = "IMAGES/mickey 17 poster.jpg" alt = "Mickey 17 2025">
+        <div class="r18-label">R-18</div>
+      </div>
+    </div>
+    <div class="carousel-item carousel-item-rightmost">
+      <div class="poster-container">
+        <img src="IMAGES\Captain America.jpeg" alt="Captain America: Brave New World">
+        <div class="pg-label">PG</div>
+      </div>
+    </div>
+  </div>
+  <img src="IMAGES/left-arrow.png" class="left-arrow-movies" id="prevBtn">
+  <img src="IMAGES/right-arrow.png" class="right-arrow-movies" id="nextBtn">
+</div>
+<!-- Indicators -->
+<div class="carousel-indicators now-showing-indicators">
+  <span class="dot active" data-index="0"></span>
+  <span class="dot" data-index="1"></span>
+  <span class="dot" data-index="2"></span>
+  <span class="dot" data-index="3"></span>
+  <span class="dot" data-index="4"></span>
+</div>
+
+
+ <!--Coming Soon Section-->
+<div class="coming-soon">
+  <h1>COMING SOON</h1>
+</div>
+
+<div class="coming-soon-carousel">
+  <div class="carousel-item carousel-item-left">
+    <div class="poster-container">
+      <img src="IMAGES\Howtotrainyourdragon.jpg" alt = "How to Train your Dragon">
+      <div class="pg-label-left">PG</div>
+    </div>
+  </div>
+  <div class="carousel-item carousel-item-leftmost">
+    <div class="poster-container">
+      <img src="IMAGES\superman.jpg" alt = "Superman">
+      <div class="pg-label-leftmost">PG</div>
+    </div>
+  </div>
+  <div class="carousel-item carousel-item-center">
+    <div class="poster-container">
+      <img src = "IMAGES/avengers doomsday poster.jpg" alt = "Avengers Doomsday">
+      <div class="pg-label-center">PG</div>
+    </div>
+  </div>
+  <div class="carousel-item carousel-item-right">
+    <div class="poster-container">
+      <img src = "IMAGES\finaldestination.jpg" alt = "Final Destination">
+      <div class="r18-label">R-18</div>
+    </div>
+  </div>
+  <div class="carousel-item carousel-item-rightmost">
+    <div class="poster-container">
+      <img src="IMAGES\theamateur.jpg" alt = "The Amateur">
+      <div class="pg-label">PG</div>
+    </div>
+  </div>
+  <img src="IMAGES/left-arrow.png" class="left-arrow-movies" id="coming-soonprev">
+  <img src="IMAGES/right-arrow.png" class="right-arrow-movies" id="coming-soonnext">
+</div>
+<div class="carousel-indicators coming-soon-indicators">
+  <span class="dot" data-index="0"></span>
+  <span class="dot" data-index="1"></span>
+  <span class="dot active" data-index="2"></span>
+  <span class="dot" data-index="3"></span>
+  <span class="dot" data-index="4"></span>
+</div>
+
+<!-- JavaScript -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  function setupCarousel(containerSelector, prevSelector, nextSelector, indicatorsSelector) {
+    const container = document.querySelector(containerSelector);
+    const items = container.querySelectorAll(".carousel-item");
+    const dots = document.querySelectorAll(indicatorsSelector + " .dot");
+    const prevBtn = document.querySelector(prevSelector);
+    const nextBtn = document.querySelector(nextSelector);
+    
+    let currentIndex = 2;
+    let isAnimating = false;
+
+    function updateCarousel() {
+      if (isAnimating) return;
+      isAnimating = true;
+
+     
+      items.forEach(item => {
+        item.classList.remove("carousel-item-leftmost", "carousel-item-left", 
+                            "carousel-item-center", "carousel-item-right", 
+                            "carousel-item-rightmost");
+        item.style.visibility = "hidden";
+        item.style.opacity = "0";
+        item.style.display = "none"; 
+      });
+
+    
+      const visibleRange = {
+        start: Math.max(0, currentIndex - 2),
+        end: Math.min(items.length - 1, currentIndex + 2)
+      };
+
+    
+      for (let i = visibleRange.start; i <= visibleRange.end; i++) {
+        const position = i - currentIndex;
+        const item = items[i];
+        const positions = {
+          '-2': 'carousel-item-leftmost',
+          '-1': 'carousel-item-left',
+          '0': 'carousel-item-center',
+          '1': 'carousel-item-right',
+          '2': 'carousel-item-rightmost'
+        };
+
+        const className = positions[position];
+        if (className) {
+          item.style.display = "flex"; 
+          item.classList.add(className);
+          item.style.visibility = "visible";
+          
+        
+          if (position === 0) {
+            item.style.opacity = "1";
+          } else if (Math.abs(position) === 1) {
+            item.style.opacity = "0.8";
+          } else {
+            item.style.opacity = "0.6";
+          }
+        }
+      }
+
+      
+      dots.forEach((dot, i) => dot.classList.toggle("active", i === currentIndex));
+
+      setTimeout(() => isAnimating = false, 400);
+    }
+
+    prevBtn.addEventListener("click", () => {
+      if (!isAnimating && currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
+      }
+    });
+
+    nextBtn.addEventListener("click", () => {
+      if (!isAnimating && currentIndex < items.length - 1) {
+        currentIndex++;
+        updateCarousel();
+      }
+    });
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        if (!isAnimating && currentIndex !== index) {
+          currentIndex = index;
+          updateCarousel();
+        }
+      });
+    });
+
+    updateCarousel();
+  }
+
+  setupCarousel(".carousel", "#prevBtn", "#nextBtn", ".now-showing-indicators");
+  setupCarousel(".coming-soon-carousel", "#coming-soonprev", "#coming-soonnext", ".coming-soon-indicators");
+});
+</script>
+
+
+
+<div class = "footer"> <!--footer element \copy from here-->
+
+  <div class = "socials">
+
+    <div class = "instagram">
+      <a href="#" target="_blank">
+        <img src="IMAGES/instagram-icon.png" alt="instagram-icon">
+      </a>
+    </div>
+
+    <div class = "facebook">
+      <a href="#" target="_blank">
+        <img src = "IMAGES/facebook-icon.png" alt = "facebook-icon">
+      </a>
+    </div>
+
+    <div class = "x">
+      <a href="#" target="_blank">
+        <img src = "IMAGES/x-icon.png" alt = "x-icon">
+      </a>
+    </div>
+
+    <div class = "youtube">
+      <a href="#" target="_blank">
+        <img src = "IMAGES/youtube-icon.png" alt = "youtube-icon">
+      </a>
+    </div>
+
+    <div class = "tiktok">
+      <a href="#" target="_blank">
+        <img src = "IMAGES/tiktok-icon.png" alt = "tiktok-icon">
+      </a>
+    </div>
+
+  </div>
+
+  <div class = "footer-contents">
+
+    <div>
+      <div class = "about">
+        <a href="#">ABOUT US</a>
+      </div>
+      <div class = "termsandconditions">
+        <a href="#">TERMS AND CONDITIONS</a>
+      </div>
+      <div class = "privacy policy">
+        <a href="#">PRIVACY POLICY</a>
+      </div>
+    </div>
+
+    <div>
+      <div class = "cordonbleu-logo-footer">
+        <img src = "IMAGES/cordonbleu-logo.png">
+      </div>
+      <div class = "address">
+        <p>WE MAKE YOUR EVERY EXPERIENCE FIRST-CLASS</p>
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <a href="#">FILMS COMING SOON</a>
+      </div>
+
+      <div>
+        <a href="#">FILMS NOW SHOWING</a>
+      </div>
+
+      <div>
+        <a href="#">IMAX</a>
+      </div>
+
+      <div>
+        <a href="#">VIP</a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class = "copyright">
+    <div>
+      <a href="#">&copy; 2025 Cordon Bleu Cinemas</a>
+    </div>
+  </div>
+
+</div>
+  </body>
+  </html> 

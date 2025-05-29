@@ -1,0 +1,41 @@
+.reciept-section {
+  margin-top: 100px;
+  text-align: center;
+  padding: 40px 5%;
+}
+
+.checksymbol {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 50px;
+  color: white;
+  
+}
+.checksymbol img {
+  width: 10vw;
+}
+.reciept-container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 15px;
+  padding: 10px;
+  flex-wrap: wrap;
+
+}
+.reciept-container h1{
+  color: white;
+  font-size: 50px;
+
+}
+.reciept-container p{
+  color: white;
+  background: #3f3fc7;
+  padding: 9px;
+  width: 200px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+

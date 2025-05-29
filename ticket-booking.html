@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+  <link rel="icon" href="IMAGES/tab-icon.png" type="image/png">
+  <link rel="stylesheet" href="CSS/header-footer.css">
+  <link rel="stylesheet" href="CSS/ticket-booking.css">
+  <script src="SCRIPT/movies.js"></script>
+</head>
+<body>
+  <div class="header">
+    <!-- utility navigation -->
+    <div class="utility-navigation">
+      <div class="cordonbleu-logo">
+        <a href="index.html"><img src="IMAGES/cordonbleu-logo.png" alt="cordonbleu-logo"></a>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search movies here...">
+        <img src="IMAGES/search-icon.png" alt="search icon">
+      </div>
+      <div class="shops">
+        <a href="signup-page.html">SHOPS</a>
+      </div>
+      <div class="faqs">
+        <a href="#">FAQS</a>
+      </div>
+      <div class="user-icon">
+        <a href="signup-page.html"><i class="user-icon-image bi bi-person-circle"></i></a>
+      </div>
+    </div>
+
+    <!-- main navigation -->
+    <div class="main-navigation">
+      <div class="dropdown">
+        <div class="main-navigation-button">
+          <a href="index.html">MOVIES</a>
+          <div class="dropdown-menu">
+            <div><a href="movie-list-show.html">NOW SHOWING</a></div>
+            <div><a href="movie-list-soon.html">COMING SOON</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown">
+        <div class="main-navigation-button">
+          <a href="cinema_location.html">CINEMA</a>
+          <div class="dropdown-menu">
+            <div><a href="makati-movies.html">MAKATI</a></div>
+            <div><a href="manila-movies.html">MANILA</a></div>
+            <div><a href="qc-movies.html">QUEZON CITY</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown">
+        <div class="main-navigation-button">
+          <a href="imax_try.html">IMAX</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <div class="main-navigation-button">
+          <a href="signup-page.html">CINEMA RENTAL</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--BODY-->
+  <div class="space"></div>
+  <div class="container-fluid">
+    <div class="container">
+        <div class="nav-container">
+            <div id="tix-nav" class="nav-link">
+            <a href="javascript:void(0);" onclick="showSection('tix')">TICKETS</a>
+            </div>
+            <div id="seat-nav" class="nav-link">
+            <a href="javascript:void(0);" onclick="showSection('seat')">SEAT</a>
+            </div>
+            <div id="details-nav" class="nav-link">
+            <a href="javascript:void(0);" onclick="showSection('details')">DETAILS</a>
+            </div>
+            <div id="payment-nav" class="nav-link">
+            <a href="javascript:void(0);" onclick="showSection('payment')">REVIEW AND PAY</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="containter">
+        <div class="details">
+        <h2 id="cinema-location"></h2>
+        <h1 id="movie-name"></h1>
+        <h2 id="date-time"></h2>
+        </div>
+    </div>
+   <div id="tix" class="content-section">
+    <section class="ticket">
+      <div class="ticket-container">
+        <h3>Select Tickets</h3>
+<div class="container-fluid">
+  <div class="table-responsive">
+    <table>
+      <thead>
+        <tr>
+          <th>Ticket Type</th>
+          <th>Quantity</th>
+          <th>Price per Unit</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-type="adult" data-price="350">
+          <td>Adult</td>
+          <td>
+            <div class="qty-container">
+              <button class="qty-btn minus">−</button>
+              <input type="text" class="qty-display" value="0" readonly>
+              <button class="qty-btn plus">+</button>
+            </div>
+          </td>
+          <td>₱350</td>
+          <td class="total-price">₱0</td>
+        </tr>
+        <tr data-type="child" data-price="250">
+          <td>Child/Senior</td>
+          <td>
+            <div class="qty-container">
+              <button class="qty-btn minus">−</button>
+              <input type="text" class="qty-display" value="0" readonly>
+              <button class="qty-btn plus">+</button>
+            </div>
+          </td>
+          <td>₱250</td>
+          <td class="total-price">₱0</td>
+        </tr>
+        <tr data-type="vip-adult" data-price="500">
+          <td>VIP Adult</td>
+          <td>
+            <div class="qty-container">
+              <button class="qty-btn minus">−</button>
+              <input type="text" class="qty-display" value="0" readonly>
+              <button class="qty-btn plus">+</button>
+            </div>
+          </td>
+          <td>₱500</td>
+          <td class="total-price">₱0</td>
+        </tr>
+        <tr data-type="vip-child" data-price="400">
+          <td>VIP Child/Senior</td>
+          <td>
+            <div class="qty-container">
+              <button class="qty-btn minus">−</button>
+              <input type="text" class="qty-display" value="0" readonly>
+              <button class="qty-btn plus">+</button>
+            </div>
+          </td>
+          <td>₱400</td>
+          <td class="total-price">₱0</td>
+        </tr>
+        <tr>
+          <td colspan="3" style="text-align: right; font-weight: bold;">Grand Total:</td>
+          <td id="grand-total" style="font-weight: bold;">₱0</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+    </section>
+    <div class="ticket-button">
+      <div class="previous-button"></div>
+      <div class="next-button">
+        <a href="javascript:void(0);" onclick="showSection('seat')"><button class="next-btn">NEXT</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div id="seat" class="content-section" style="display: none;">
+    <!--MAIN CONTENT-->
+    <iframe
+        src="manila.html"
+        id="seatFrame"
+        style="width: 50%; display: flex; justify-self: center; height: 100vh; margin-top: 30px; border-radius: 10px;">
+    </iframe>
+
+    <div class="ticket-button">
+        <div class="previous-button">
+          <a href="javascript:void(0);" onclick="showSection('tix')"><button class="previous-btn">PREVIOUS</button></a>
+        </div>
+        <div class="next-button">
+          <a href="javascript:void(0);" onclick="showSection('details')"><button class="next-btn">NEXT</button></a>
+        </div>
+      </div>
+  </div>
+
+  <div id="details" class="content-section" style="display: none;">
+    <div class="personal-details">
+      <div class="personal-details-table">
+        <table>
+          <tr>
+            <th colspan="2" style="font-size: 25px;">PERSONAL DETAILS</th>
+          </tr>
+          <tr>
+            <td><label for="name">NAME</label></td>
+            <td><input type="text" placeholder="e.g., Juan de la Cruz"></td>
+        </tr>
+        <tr>
+            <td><label for="phone">PHONE NO</label></td>
+            <td><input type="tel" placeholder="+63 912 345 6789"></td>
+        </tr>
+        <tr>
+            <td><label for="email">EMAIL</label></td>
+            <td><input type="email" placeholder="example@gmail.com"></td>
+        </tr>
+        <tr>
+            <td><label for="confirm-email">CONFIRM EMAIL</label></td>
+            <td><input type="email"></td>
+        </tr>
+        </table>
+      </div>
+    </div>
+    <div class="ticket-button">
+      <div class="previous-button">
+        <a href="javascript:void(0);" onclick="showSection('seat')"><button class="previous-btn">PREVIOUS</button></a>
+      </div>
+      <div class="next-button">
+        <a href="Ticket_Reciept.html"><button class="next-btn">PROCEED TO PAYMENT</button></a>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="payment" class="content-section" style="display: none;">
+    <div class="payment-review">
+      <div class="confirmation">
+        <h1>PAYMENT CONFIRMED!</h1>
+        <p>Your payment has been successfully processed.</p>
+        <p>Thank you for booking with us! We look forward to seeing you at the cinema.</p>
+      </div>
+    </div>
+    <div class="ticket-button">
+      <div class="previous-button">
+        <a href="javascript:void(0);" onclick="showSection('details')"><button class="previous-btn">PREVIOUS</button></a>
+      </div>
+      <div class="next-button"></div>
+    </div>
+  </div>
+
+  <script>
+    // Function to switch between sections
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.content-section');
+      sections.forEach(section => {
+        section.style.display = 'none'; // Hide all sections
+      });
+
+      const selectedSection = document.getElementById(sectionId);
+      selectedSection.style.display = 'block'; // Show the selected section
+    }
+
+    // Initially show the 'tix' section
+    document.addEventListener('DOMContentLoaded', () => {
+      showSection('tix');
+    });
+  </script>
+
+
+
+
+  <div class="footer"> <!--footer element-->
+    <div class="socials">
+      <div class="instagram">
+        <a href="https://www.instagram.com/" target="_blank">
+          <img src="IMAGES/instagram-icon.png" alt="instagram-icon">
+        </a>
+      </div>
+      <div class="facebook">
+        <a href="https://www.facebook.com/" target="_blank">
+          <img src="IMAGES/facebook-icon.png" alt="facebook-icon">
+        </a>
+      </div>
+      <div class="x">
+        <a href="https://www.x.com/" target="_blank">
+          <img src="IMAGES/x-icon.png" alt="x-icon">
+        </a>
+      </div>
+      <div class="youtube">
+        <a href="https://www.youtube.com/" target="_blank">
+          <img src="IMAGES/youtube-icon.png" alt="youtube-icon">
+        </a>
+      </div>
+      <div class="tiktok">
+        <a href="https://www.tiktok.com/" target="_blank">
+          <img src="IMAGES/tiktok-icon.png" alt="tiktok-icon">
+        </a>
+      </div>
+    </div>
+    <div class="footer-contents">
+      <div>
+        <div class="about">
+          <a href="aboutus.html">ABOUT US</a>
+        </div>
+        <div class="termsandconditions">
+          <a href="#">TERMS AND CONDITIONS</a>
+        </div>
+        <div class="privacy-policy">
+          <a href="#">PRIVACY POLICY</a>
+        </div>
+      </div>
+      <div>
+        <div class="cordonbleu-logo-footer">
+          <img src="IMAGES/cordonbleu-logo.png">
+        </div>
+        <div class="address">
+          <p>WE MAKE YOUR EVERY EXPERIENCE FIRST-CLASS</p>
+        </div>
+      </div>
+      <div>
+        <div><a href="movie-list-soon.html">FILMS COMING SOON</a></div>
+        <div><a href="movie-list-show.html">FILMS NOW SHOWING</a></div>
+        <div><a href="imax_final.html">IMAX</a></div>
+        <div><a href="vip-movies.html">VIP</a></div>
+      </div>
+    </div>
+    <div class="copyright">
+      <div>
+        <p>&copy; 2025 Cordon Bleu Cinemas</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

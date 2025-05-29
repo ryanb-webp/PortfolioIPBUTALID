@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/DONOTOPEN.css">
+  <link rel="stylesheet" href="CSS/movie_page.css">
+  <link rel="stylesheet" href="CSS/footer.css">
+  <title>Header</title>
+</head>
+<body>
+  <div class="header"> <!--header-->
+    <!--utility navigation-->
+    <div class="utility-navigation d-flex justify-content-between">
+      <div>
+        <div class="cordonbleu-logo"> <!--logo-->
+          <a href = "movie_page.html"><img src = "IMAGES/cordonbleu-logo.png" alt = "cordonbleu-logo"></a>
+        </div>
+      </div>
+      <div class = "d-flex">
+        <div class="search-bar"> <!--search bar-->
+          <input type="type" placeholder="Search movies here...">
+          <i class="search-icon bi bi-search"></i>
+        </div>
+        <div class="shops"> <!--shops-->
+          <a href="signup-page.html">SHOPS</a>
+        </div>
+        <div class="faqs"> <!--faqs-->
+          <a href="#">FAQS</a>
+        </div>
+        <div class="user-icon"> <!-- user icon-->
+          <a href="signup-page.html"><i class="user-icon-image bi bi-person-circle"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!--main navigation-->
+    <div class="main-navigation">
+      <div class="dropdown">
+        <div class="main-navigation-button">
+          <a href="movie_page.html">MOVIES</a>
+          <div class="dropdown-menu">
+            <div><a href="movie-list-show.html">NOW SHOWING</a></div>
+            <div><a href="movie-list-soon.html">COMING SOON</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown">
+        <div class="main-navigation-button">
+          <a href="cinema_location.html">CINEMA</a>
+          <div class="dropdown-menu">
+            <div><a href="makati-movies.html">MAKATI</a></div>
+            <div><a href="manila-movies.html">MANILA</a></div>
+            <div><a href="qc-movies.html">QUEZON CITY</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown">
+        <div class="main-navigation-button">
+          <a href="imax_final.html">IMAX</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <div class="main-navigation-button">
+          <a href="signup-page.html">CINEMA RENTAL</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <!--MAIN CONTENT-->
+  <!--movie page-->
+  <div class="herobanner_space"></div>
+  <!-- Hero Banner -->
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="herobanner-size" src="IMAGES/snow white.jpg" alt="Snow White Live Action">
+      </div>
+      <div class="carousel-item">
+        <img class="herobanner-size" src="IMAGES/minecraft movie.jpg" alt="Minecraft Movie 2025">
+      </div>
+      <div class="carousel-item">
+        <img class="herobanner-size" src="IMAGES/death of a unicorn.jpg " alt="Death of a Unicorn">
+      </div>
+      <div class="carousel-item">
+        <img class="herobanner-size" src="IMAGES/Mickey-17.jpg" alt="Mickey 17">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+  </div>
+
+  <!--Now Showing Section-->
+  <div class="now-showing">
+    <h1>NOW SHOWING</h1>
+  </div>
+  <!--Movies-->
+  <div class="grids-movies">
+    <div>
+      <div class="grid-item">
+        <img class="movie-poster" src="IMAGES/snow white poster.jpg" alt="Snow White 2025">
+        <div class="pg-label">PG</div>
+        <a href="snow-white.html"><div class="overlay">View More</div></a>
+      </div>
+      <div>
+        <p class="movie-name">SNOW WHITE</p>
+      </div>
+    </div>
+    <div>
+      <div class="grid-item">
+        <img class="movie-poster" src="IMAGES/minecraft movie poster.jpg" alt="Minecraft Movie 2025">
+        <a href="#"><div class="overlay">View More</div></a>
+        <div class="pg-label">PG</div>
+      </div>
+      <div>
+        <p class="movie-name">A MINECRAFT MOVIE</p>
+      </div>
+    </div>
+    <div>
+      <div class="grid-item">
+        <img class="movie-poster" src="IMAGES/death of a unicorn poster.jpg" alt="Death of the Unicorn 2025">
+        <a href="#"><div class="overlay">View More</div></a>
+        <div class="r18-label">R-18</div>
+      </div>
+      <div>
+        <p class="movie-name">DEATH OF A UNICORN</p>
+      </div>
+    </div>
+    <div>
+      <div class="grid-item">
+        <img class="movie-poster" src="IMAGES/mickey 17 poster.jpg" alt="Mickey 17 2025">
+        <a href="#"><div class="overlay">View More</div></a>
+        <div class="r18-label">R-18</div>
+      </div>
+      <img src="IMAGES/left-arrow.png" class="left-arrow-movies">
+      <img src="IMAGES/right-arrow.png" class="right-arrow-movies">
+      <div>
+        <p class="movie-name">MICKEY 17</p>
+      </div>
+    </div>
+  </div>
+
+  <!--Coming Soon Section-->
+  <div class="coming-soon">
+    <h1>COMING SOON</h1>
+  </div>
+  <!--Movies-->
+  <div class="grids-movies">
+    <div>
+      <div class="grid-item">
+        <img class="movie-poster" src="IMAGES/miku who cant sing poster.jpg" alt="A Miku Who Can't Sing 2025">
+        <a href="miku-cant-sing.html"><div class="overlay">View More</div></a>
+        <div class="pg-label">PG</div>
+      </div>
+      <div>
+        <p class="movie-name">A MIKU WHO CAN'T SING</p>
+      </div>
+    </div>
+    <div>
+      <div class="grid-item">
+        <img class="movie-poster" src="IMAGES/Avengers Doomsday poster.jpg" alt="Avengers Doomsday">
+        <a href="#"><div class="overlay">View More</div></a>
+        <div class="pg-label">PG</div>
+      </div>
+      <div>
+        <p class="movie-name">AVENGERS DOOMSDAY</p>
+      </div>
+    </div>
+    <div>
+      <div class="grid-item">
+        <img class="movie-poster" src="IMAGES/Locked poster.jpg" alt="Locked 2025">
+        <a href="#"><div class="overlay">View More</div></a>
+        <div class="r18-label">R-18</div>
+      </div>
+      <div>
+        <p class="movie-name">LOCKED</p>
+      </div>
+    </div>
+    <div>
+      <div class="grid-item">
+        <img class="movie-poster" src="IMAGES/fatherlland poster.avif" alt="Fatherland 2025">
+        <a href="#"><div class="overlay">View More</div></a>
+        <div class="pg-label">PG</div>
+      </div>
+      <img src="IMAGES/left-arrow.png" class="left-arrow-movies">
+      <img src="IMAGES/right-arrow.png" class="right-arrow-movies">
+      <div>
+        <p class="movie-name">FATHERLAND</p>
+      </div>
+    </div>
+  </div>
+
+  <!--Newsletter-->
+  <!-- Newsletter Section -->
+<div class="container-fluid w-75 py-5 px-4 text-white">
+  <div class="row align-items-center">
+    
+    <!-- Left side: Text content -->
+    <div class="col-md-6 mb-4 mt-4 mb-md-0 grid-item-newsletter">
+      <h2 class="fw-bold mb-3">WANT TO STAY UPDATED<br>WITH THE LATEST MOVIES?</h2>
+      <p class="mb-0">
+        Be the first to know about new movie releases, exclusive deals, and special events! 
+        Subscribe to our newsletter and get cinema updates straight to your inbox.
+      </p>
+    </div>
+
+    <!-- Right side: Email and Subscribe -->
+    <div class="col-md-6">
+      <form class="d-flex flex-column gap-3">
+        <div class="form-group">
+          <input 
+            type="email" class="form-control bg-transparent text-white border-0 border-bottom border-white rounded-0" placeholder="✉️ Email address">
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-outline-light px-4 rounded-pill ">SUBSCRIBE</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+  <!--footer-->
+  <div class="footer"> <!--footer element-->
+    <div class="socials">
+      <div class="instagram">
+        <a href="#" target="_blank">
+          <img src="IMAGES/instagram-icon.png" alt="instagram-icon">
+        </a>
+      </div>
+      <div class="facebook">
+        <a href="#" target="_blank">
+          <img src="IMAGES/facebook-icon.png" alt="facebook-icon">
+        </a>
+      </div>
+      <div class="x">
+        <a href="#" target="_blank">
+          <img src="IMAGES/x-icon.png" alt="x-icon">
+        </a>
+      </div>
+      <div class="youtube">
+        <a href="#" target="_blank">
+          <img src="IMAGES/youtube-icon.png" alt="youtube-icon">
+        </a>
+      </div>
+      <div class="tiktok">
+        <a href="#" target="_blank">
+          <img src="IMAGES/tiktok-icon.png" alt="tiktok-icon">
+        </a>
+      </div>
+    </div>
+    <div class="footer-contents">
+      <div>
+        <div class="about">
+          <a href="aboutus.html">ABOUT US</a>
+        </div>
+        <div class="termsandconditions">
+          <a href="#">TERMS AND CONDITIONS</a>
+        </div>
+        <div class="privacy policy">
+          <a href="#">PRIVACY POLICY</a>
+        </div>
+      </div>
+      <div>
+        <div class="cordonbleu-logo-footer">
+          <img src="IMAGES/cordonbleu-logo.png">
+        </div>
+        <div class="address">
+          <p>WE MAKE YOUR EVERY EXPERIENCE FIRST-CLASS</p>
+        </div>
+      </div>
+      <div>
+        <div><a href="movie-list-soon.html">FILMS COMING SOON</a></div>
+        <div><a href="movie-list-show.html">FILMS NOW SHOWING</a></div>
+        <div><a href="imax_final.html">IMAX</a></div>
+        <div><a href="vip-movies.html">VIP</a></div>
+      </div>
+    </div>
+    <div class="copyright">
+      <div>
+        <p>&copy; 2025 Cordon Bleu Cinemas</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

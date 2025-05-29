@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <link rel = "stylesheet" href = "CSS/header.css">
+  <link rel = "stylesheet" href = "CSS/movie-list.css">
+  <link rel = "stylesheet" href = "CSS/footer.css">
+
+  <title>LOCATION 1 - Cordon Bleu Cinemas</title>
+</head>
+
+<body>
+  <div class = "header"> <!--header-->
+      
+    <!--utility navigation-->
+
+    <div class = "utility-navigation">
+
+    <div class = "cordonbleu-logo"> <!--logo-->
+       <a href = "index.html"><img src = "IMAGES/cordonbleu-logo.png" alt = "cordonbleu-logo"></a>
+    </div>
+
+    <div class = "search-bar"> <!--search bar-->
+        <input type="type" placeholder="Search movies here...">
+        <img src = "IMAGES/search-icon.png">
+    </div>
+
+    <div class = "shops"> <!--shops-->  
+        <a href = "signup-page.html">SHOPS</a>
+    </div>
+
+    <div class = "faqs"> <!--faqs-->
+        <a href = "faqs.html">FAQS</a>
+    </div>
+
+    <div class = "user-icon"> <!-- user icon-->  
+      <a href="signup-page.html"><i class="user-icon-image bi bi-person-circle"></i></a>
+    </div>
+    </div> 
+
+    <!--main navigation-->
+    <div class = "main-navigation">
+    <div class="dropdown"> 
+        <div class="main-navigation-button">
+        <a href = "index.html">MOVIES</a>
+        <div class="dropdown-menu">
+            <div><a href = "movie-list-show.html">NOW SHOWING</a></div>
+            <div><a href = "movie-list-soon.html">COMING SOON</a></div>
+        </div>
+        </div>
+    </div>
+
+    <div class="dropdown"> 
+      <div class="main-navigation-button">
+        <a href = "cinema_location.html">CINEMA</a>
+        <div class="dropdown-menu">
+          <div><a href = "makati-movies.html">MAKATI</a></div>
+          <div><a href = "manila-movies.html">MANILA</a></div>
+          <div><a href = "qc-movies.html">QUEZON CITY</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dropdown"> 
+        <div class="main-navigation-button"><a href = "imax_final.html">IMAX</a></div>
+    </div>
+
+    <div class="dropdown"> 
+        <div class="main-navigation-button"><a href = "signup-page.html">CINEMA RENTAL</a></div>
+    </div>
+    
+    </div>
+  </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+    <!--MAIN CONTENT-->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <p class="display-6 fw-bolder text-capitalize text-white">QUEZON CITY</p>
+          <div class="carousel-item active">
+              <img class="herobanner-size" src="https://m.media-amazon.com/images/M/MV5BMGNiN2RlZTMtMTkyZC00YjkwLTgyY2QtMDg1ZDNhODQwNWM4XkEyXkFqcGc@._V1_.jpg" alt="Avengers Doomsday">
+          </div>
+          <div class="carousel-item">
+              <img class="herobanner-size" src="https://m.media-amazon.com/images/M/MV5BZjg2NDFhZDEtYzZlZC00ZTRkLTg4NDctYjIwNTQxYWY4ODFiXkEyXkFqcGc@._V1_.jpg" alt="Locked">
+          </div>
+          <div class="carousel-item">
+              <img class="herobanner-size" src="https://preview.redd.it/colorful-stage-the-movie-a-miku-who-cant-sing-new-main-v0-h57ia4xmjxhe1.jpeg?auto=webp&s=a13a824bd1c7136f15383b9958734f3041fb5143" alt="Miku Who Can't Sing">
+          </div>
+          <div class="carousel-item">
+              <img class="herobanner-size" src="https://media.assettype.com/tribune%2F2025-03-05%2F0me82a2a%2Ffatherland-poster.jpg?rect=0%2C694%2C1108%2C623" alt="Fatherland">
+          </div>
+      </div>
+      
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+      </button>
+      
+      <div class="carousel-indicators">
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      </div>
+    </div>
+
+    <div class="filter">
+      <div class="sort">
+        <h1>Filter</h1>
+        <div class="loc-select">
+          <select class="loc-box">
+            <option>Popular</option>
+            <option>A-Z</option>
+          </select>
+        </div>  
+      </div>
+      <div class="main-content">
+        <div id="noselect"class="filter-content">
+        <a href="movie-list-show.html">
+            <div class="box"><h3>Now Showing</h3></div>
+          </a>
+          <a href="movie-list-soon.html">
+            <div class="box"><h3>Coming Soon</h3></div>
+          </a>
+      </div>
+      <div class="main-content">
+        <div id="noselect"class="filter-content">
+            <a href="#genre">
+            <div class="box"><h3>Genre</h3></div>
+            </a>
+            <a href="#lang">
+            <div class="box"><h3>Language</h3></div>
+            </a>
+            <a href="#form">
+            <div class="box"><h3>Format</h3></div>
+            </a>
+            <a href="#rate">
+            <div class="box"><h3>Rating</h3></div>
+            </a>
+            <a href="movie-list-show.html">
+                <div class="box"><h3>Now Showing</h3></div>
+            </a>
+            <a href="movie-list-soon.html">
+                <div class="box"><h3>Coming Soon</h3></div>
+            </a>
+        </div>
+      </div>
+      <section id="genre" class="content step">
+        <div class="box">+ Action</div>
+        <div class="box">+ Romance</div>
+        <div class="box">+ Drama</div>
+        <div class="box">+ Comedy</div>
+        <div class="box">+ Fantasy</div>
+        <div class="box">+ Musical</div>
+        <div class="box">+ Horror</div>
+        <div class="box">+ Animation</div>
+        <div class="box">+ Sci-fi</div>
+        <div class="box">+ Adventure</div>
+      </section>
+
+     <section id="lang" class="content step">
+        <div class="box">+ English</div>
+        <div class="box">+ Filipino</div>
+        <div class="box">+ Korean</div>
+        <div class="box">+ Japanese</div>
+        <div class="box">+ Spanish</div>
+    </section>
+
+      <section id="form" class="content step">
+        <div class="box">+ 2D</div>
+        <div class="box">+ 3D</div>
+        <div class="box">+ IMAX</div>
+      </section>
+
+      <section id="rate" class="content step">
+        <div class="box">+ PG</div>
+        <div class="box">+ PG-13</div>
+        <div class="box">+ R-16</div>
+        <div class="box">+ R</div>
+        <div class="box">+ R-18</div>
+      </section>
+    </div>
+    <hr>
+    <div class="movie-section">
+        <div class="movie">
+            <a href="snow-white.html"><img src="https://upload.wikimedia.org/wikipedia/en/1/1f/Snow_White_%282025_film%29_final_poster.jpg"></a>
+            <div class="details">
+              <a href="snow-white.html"><h1><b>Snow White</b></h1></a>
+              <d>1h 49m &bull; PG</d>
+              <p>A beautiful girl, Snow White, takes refuge in the forest in the house of seven dwarfs to hide from her stepmother, the wicked Queen.</p>
+              <d>Fantasy &bull; Romance</d>
+              <div class="date-box">
+                <div class="date-box1">2D</div>
+                <a href="" class="date-box2">14:30</a>
+              </div>
+            </div>
+          </div>
+          <div class="movie">
+            <a href="minecraft.html"><img src="https://m.media-amazon.com/images/M/MV5BYzFjMzNjOTktNDBlNy00YWZhLWExYTctZDcxNDA4OWVhOTJjXkEyXkFqcGc@._V1_.jpg"></a>
+            <div class="details">
+              <a href="minecraft.html"><h1><b>A Minecraft Movie</b></h1></a>
+              <d>1h 41m &bull; PG</d>
+              <p style="font-size: 0.9rem">A mysterious portal pulls four misfits into the Overworld. To get back home, they'll have to master the terrain while embarking on a magical quest with an unexpected crafter named Steve. </p>
+              <d>Action &bull; Comedy</d>
+              <div class="date-box">
+                <div class="date-box1">2D</div>
+                <a href="" class="date-box2">16:30</a>
+              </div>
+            </div>
+          </div>
+          <div class="movie">
+            <a href=""><img src="https://m.media-amazon.com/images/M/MV5BNjUzMjhkZjktNTU5Mi00MzhmLWJhMTQtZjhkYjczOTEzM2M5XkEyXkFqcGc@._V1_.jpg"></a>
+            <div class="details">
+              <a href=""><h1><b>Death of a Unicorn</b></h1></a>
+              <d>1h 47m &bull; R-18</d>
+              <p>Father-Daughter duo Elliott and Ridley hit a unicorn with their car and bring it to the wilderness retreat of a mega-wealthy pharmaceutical CEO. </p>
+              <d>Comedy &bull; Horror</d>
+              <div class="date-box">
+                <div class="date-box1">2D</div>
+                <a href="" class="date-box2">19:45</a>
+              </div>
+            </div>
+          </div>
+          <div class="movie">
+            <a href=""><img src="https://m.media-amazon.com/images/M/MV5BZGQwYmEzMzktYzBmMy00NmVmLTkyYTUtOTYyZjliZDNhZGVkXkEyXkFqcGc@._V1_.jpg"></a>
+            <div class="details">
+              <a href=""><h1><b>Mickey 17</b></h1></a>
+              <d>2h 17m &bull; R-18</d>
+              <p style="font-size: 0.93rem">Unlikely hero Mickey Barnes finds himself in the extraordinary circumstance of working for an employer who demands the ultimate commitment to the job… to die, for a living.</p>
+              <d>Comedy &bull; Horror</d>
+              <div class="date-box">
+                <div class="date-box1">2D</div>
+                <a href="" class="date-box2">19:45</a>
+              </div>
+            </div>
+          </div>
+          <div class="movie">
+            <a href=""><img src="https://m.media-amazon.com/images/M/MV5BZTU0ZDRmM2ItNjRlMS00MWNmLWJhZmItYmNjZmM3MGMyMGQzXkEyXkFqcGc@._V1_.jpg"></a>
+            <div class="details">
+              <a href=""><h1><b>Ne Zha 2</b></h1></a>
+              <d>2h 23m &bull; PG</d>
+              <p style="font-size: 0.90rem">After the catastrophe, although the souls of Nezha and Aobing were saved, their bodies would soon be shattered. Taiyi Zhenren planned to use the seven-colored lotus to rebuild their bodies.</p>
+              <d>Animation &bull; Fantasy</d>
+              <div class="date-box">
+                <div class="date-box1">2D</div>
+                <a href="" class="date-box2">17:00</a>
+              </div>
+            </div>
+          </div>
+          <div class="movie">
+            <a href=""><img src="https://m.media-amazon.com/images/M/MV5BNDRjY2E0ZmEtN2QwNi00NTEwLWI3MWItODNkMGYwYWFjNGE0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"></a>
+            <div class="details">
+              <a href=""><h1><b>Captain America: Brave New World</b></h1></a>
+              <d>1h 58m &bull; R-13</d>
+              <p style="font-size: 0.79rem">Sam Wilson, the new Captain America, finds himself in the middle of an international incident and must discover the motive behind a nefarious global plan.</p>
+              <d>Action &bull; Sci-fi</d>
+              <div class="date-box">
+                <div class="date-box1">2D</div>
+                <a href="" class="date-box2">18:30</a>
+              </div>
+            </div>
+          </div>
+      <div class="movie">
+        <a href=""><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a3ec971a-50ed-4cf1-a4ed-1da3c232d2b5/dhv0xak-25cabcf1-0074-40bd-a1f6-6fb6e81feb86.png/v1/fill/w_1280,h_1920,q_80,strp/marvel_studios__avengers__doomsday_fan_poster_by_maxvel33_dhv0xak-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTkyMCIsInBhdGgiOiJcL2ZcL2EzZWM5NzFhLTUwZWQtNGNmMS1hNGVkLTFkYTNjMjMyZDJiNVwvZGh2MHhhay0yNWNhYmNmMS0wMDc0LTQwYmQtYTFmNi02ZmI2ZTgxZmViODYucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.9_IuJIJYDyGFtQUzUSE7mokK9kyQ4NrWM0HPo5Oc7b8"></a>
+        <div class="details">
+          <a href=""><h1><b>Avengers: Doomsday</b></h1></a>
+          <d>2026</d>
+          <p style="font-size: 0.9rem">An upcoming film in the Marvel Cinematic Universe's (MCU) sixth Phase and part of The Multiverse Saga.</p>
+          <d>Action &bull; Sci-fi</d>
+          <div class="date-box">
+            <div class="date-box1">TBD</div>
+          </div>
+        </div>
+      </div>
+      <div class="movie">
+        <a href=""><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ab/Locked_%282025%29_poster.jpg/220px-Locked_%282025%29_poster.jpg"></a>
+        <div class="details">
+          <a href=""><h1><b>Locked</b></h1></a>
+          <d>1h 35m &bull; R-18</d>
+          <p>A thief breaking into a luxury SUV realizes that he has slipped into a sophisticated game of psychological horror.</p>
+          <d>Horror &bull; Thriller</d>
+          <div class="date-box">
+            <a href="" class="date-box2 advance">Book In Advance</a>
+          </div>
+        </div>
+      </div>
+      <div class="movie">
+        <a href="miku-cant-sing.html"><img src="https://gkids.com/wp-content/uploads/2025/02/MIKU_USPosterMain-2025-02-10.jpg"></a>
+        <div class="details">
+          <a href="miku-cant-sing.html"><h1><b>Colorful Stage!<br>The Movie</b></h1></a>
+          <d>1h 45m &bull; PG</d>
+          <p style="font-size: 0.8rem;">Teen musician Ichika encounters virtual singer Hatsune Miku in Shibuya. They collaborate to help Miku create emotional music and form deeper connections. </p>
+          <d>Animation &bull; Musical</d>
+          <div class="date-box">
+            <a href="" class="date-box2 advance">Book In Advance</a>
+          </div>
+        </div>
+      </div>
+      <div class="movie">
+        <a href=""><img src="https://media.assettype.com/tribune/2025-03-05/0me82a2a/fatherland-poster.jpg?w=1200&h=675&auto=format%2Ccompress&fit=max&enlarge=true"></a>
+        <div class="details">
+          <a href=""><h1><b>Fatherland</b></h1></a>
+          <d>2h 7m &bull; PG</d>
+          <p style="font-size: 0.85rem">A young man from the U.S. returns to the Philippines to search for his long-lost father, only to uncover a past filled with secrets, identity struggles, and danger—leading to a heartbreaking reunion in the midst of violence.</p>
+          <d>Drama &bull; Action</d>
+          <div class="date-box">
+            <a href="" class="date-box2 advance">Book In Advance</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+ <!--footer-->
+ <div class = "footer"> <!--footer element \copy from here-->
+
+    <div class = "socials">
+
+      <div class = "instagram">
+        <a href="https://www.instagram.com/cordonbleucinemas/" target="_blank">
+          <img src="IMAGES/instagram-icon.png" alt="instagram-icon">
+        </a>
+      </div>
+
+      <div class = "facebook">
+        <a href="https://www.facebook.com/people/Cordon-Bleu-Cinemas/61576837260520/" target="_blank">
+          <img src = "IMAGES/facebook-icon.png" alt = "facebook-icon">
+        </a>
+      </div>
+
+      <div class = "x">
+        <a href="https://x.com/cordonbcinemas" target="_blank">
+          <img src = "IMAGES/x-icon.png" alt = "x-icon">
+        </a>
+      </div>
+
+      <div class = "youtube">
+        <a href="https://www.youtube.com/@CordonBleuCinemas" target="_blank">
+          <img src = "IMAGES/youtube-icon.png" alt = "youtube-icon">
+        </a>
+      </div>
+
+      <div class = "tiktok">
+        <a href="https://www.tiktok.com/@cordonbleucinemas" target="_blank">
+          <img src = "IMAGES/tiktok-icon.png" alt = "tiktok-icon">
+        </a>
+      </div>
+
+    </div>
+
+    <div class = "footer-contents">
+
+      <div>
+        <div class = "about">
+          <a href="aboutus.html">ABOUT US</a>
+        </div>
+        <div class = "termsandconditions">
+          <a href="#">TERMS AND CONDITIONS</a>
+        </div>
+        <div class = "privacy policy">
+          <a href="#">PRIVACY POLICY</a>
+        </div>
+      </div>
+
+      <div>
+        <div class = "cordonbleu-logo-footer">
+          <img src = "IMAGES/cordonbleu-logo.png">
+        </div>
+        <div class = "address">
+          <p>WE MAKE YOUR EVERY EXPERIENCE FIRST-CLASS</p>
+        </div>
+      </div>
+
+      <div>
+        <div><a href="movie-list-soon.html">FILMS COMING SOON</a></div>
+        <div><a href="movie-list-show.html">FILMS NOW SHOWING</a></div>
+        <div><a href="imax_final.html">IMAX</a></div>
+        <div><a href="vip-movies.html">VIP</a></div>
+      </div>
+
+    </div>
+
+    <div class = "copyright">
+      <div>
+        <p>&copy; 2025 Cordon Bleu Cinemas</p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/location-2.css">
+  <link rel="stylesheet" href="CSS/header.css">
+  <link rel="stylesheet" href="CSS/footer.css">
+  <script src="SCRIPTS/ticket-booking.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <title>Location 2</title>
+  <style>
+    .btn-white {
+      background-color: transparent;
+      color: white;
+      border: 1px solid white;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    .btn-check:checked + .btn-white {
+      border: 3px solid black;
+      box-shadow: 0 0 8px black;
+      color: black;
+      background-color: #5458ae;
+    }
+    .btn-white:hover {
+      background-color: #f8f8f8;
+    }
+    .nav-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    @media (max-width: 700px)
+    {
+      .ticket
+      {
+        width: clamp(20px, 100vw, 100px)!important;
+      }
+    }
+    
+      
+    .ticket table {
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+    }
+    .qty-container {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .qty-display {
+      width: 40px;
+      text-align: center;
+    }
+    @media (max-width: 768px) {
+      .details h1, .details h2 {
+        font-size: 1.2rem;
+        text-align: center;
+      }
+      .ticket-button {
+        flex-direction: column;
+        align-items: center;
+      }
+      .btn-group {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class = "header"> <!--header-->
+      
+    <!--utility navigation-->
+
+    <div class = "utility-navigation">
+
+    <div class = "cordonbleu-logo"> <!--logo-->
+      <a href = "index.html"><img src = "IMAGES/cordonbleu-logo.png" alt = "cordonbleu-logo"></a>
+    </div>
+
+    <div class = "search-bar"> <!--search bar-->
+        <input type="type" placeholder="Search movies here...">
+        <img src = "IMAGES/search-icon.png">
+    </div>
+
+    <div class = "shops"> <!--shops-->  
+        <a href = "signup-page.html">SHOPS</a>
+    </div>
+
+    <div class = "faqs"> <!--faqs-->
+        <a href = "#">FAQS</a>
+    </div>
+
+    <div class = "user-icon"> <!-- user icon-->  
+      <a href="signup-page.html"><i class="user-icon-image bi bi-person-circle"></i></a>
+    </div>
+    </div> 
+
+    <!--main navigation-->
+    <div class = "main-navigation">
+    <div class="dropdown"> 
+        <div class="main-navigation-button">
+        <a href = "index.html">MOVIES</a>
+        <div class="dropdown-menu">
+            <div><a href = "movie-list-show.html">NOW SHOWING</a></div>
+            <div><a href = "movie-list-soon.html">COMING SOON</a></div>
+        </div>
+        </div>
+    </div>
+
+    <div class="dropdown"> 
+      <div class="main-navigation-button">
+        <a href = "cinema_location.html">CINEMA</a>
+        <div class="dropdown-menu">
+          <div><a href = "makati-movies.html">MAKATI</a></div>
+          <div><a href = "manila-movies.html">MANILA</a></div>
+          <div><a href = "qc-movies.html">QUEZON CITY</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dropdown"> 
+        <div class="main-navigation-button"><a href = "imax_final.html">IMAX</a></div>
+    </div>
+
+    <div class="dropdown"> 
+        <div class="main-navigation-button"><a href = "signup-page.html">CINEMA RENTAL</a></div>
+    </div>
+    
+    </div>
+  </div>
+
+  <div class="nav-container">
+    <div id="tix-nav" class="nav-link">
+      <a href="javascript:void(0);" onclick="showSection('tix')">TICKETS</a>
+    </div>
+    <div id="seat-nav" class="nav-link">
+      <a href="javascript:void(0);" onclick="showSection('seat')">SEAT</a>
+    </div>
+    <div id="details-nav" class="nav-link">
+      <a href="javascript:void(0);" onclick="showSection('details')">DETAILS</a>
+    </div>
+  </div>
+  
+<div class="container-fluid">
+  <div id="tix" class="content-section">
+    <div class="details">
+      <h3>MANILA CINEMA</h3>
+      <h2>SNOW WHITE (2025)</h2>
+      <h4>May 15 14:30</h4>
+    </div>
+    <section class="ticket">
+      <div class="ticket-container">
+        <h3>Select Tickets</h3>
+<div class="container-fluid">
+  <div class="table-responsive">
+    <table>
+      <thead>
+        <tr>
+          <th>Ticket Type</th>
+          <th>Quantity</th>
+          <th>Price per Unit</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-type="adult" data-price="350">
+          <td>Adult</td>
+          <td>
+            <div class="qty-container">
+              <button class="qty-btn minus">−</button>
+              <input type="text" class="qty-display" value="0" readonly>
+              <button class="qty-btn plus">+</button>
+            </div>
+          </td>
+          <td>₱350</td>
+          <td class="total-price">₱0</td>
+        </tr>
+        <tr data-type="child" data-price="250">
+          <td>Child/Senior</td>
+          <td>
+            <div class="qty-container">
+              <button class="qty-btn minus">−</button>
+              <input type="text" class="qty-display" value="0" readonly>
+              <button class="qty-btn plus">+</button>
+            </div>
+          </td>
+          <td>₱250</td>
+          <td class="total-price">₱0</td>
+        </tr>
+        <tr data-type="vip-adult" data-price="500">
+          <td>VIP Adult</td>
+          <td>
+            <div class="qty-container">
+              <button class="qty-btn minus">−</button>
+              <input type="text" class="qty-display" value="0" readonly>
+              <button class="qty-btn plus">+</button>
+            </div>
+          </td>
+          <td>₱500</td>
+          <td class="total-price">₱0</td>
+        </tr>
+        <tr data-type="vip-child" data-price="400">
+          <td>VIP Child/Senior</td>
+          <td>
+            <div class="qty-container">
+              <button class="qty-btn minus">−</button>
+              <input type="text" class="qty-display" value="0" readonly>
+              <button class="qty-btn plus">+</button>
+            </div>
+          </td>
+          <td>₱400</td>
+          <td class="total-price">₱0</td>
+        </tr>
+        <tr>
+          <td colspan="3" style="text-align: right; font-weight: bold;">Grand Total:</td>
+          <td id="grand-total" style="font-weight: bold;">₱0</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+    </section>
+    <div class="ticket-button">
+      <div class="previous-button"></div>
+      <div class="next-button">
+        <a href="javascript:void(0);" onclick="showSection('seat')"><button class="next-btn">NEXT</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div id="seat" class="content-section" style="display: none;">
+    <div class="details">
+      <h3>MANILA CINEMA</h3>
+      <h2>SNOW WHITE (2025)</h2>
+      <h4>May 15 14:30</h4>
+    </div>
+
+    <!--MAIN CONTENT-->
+      <div class="container">
+          <div class="cinema">
+              <div class="screen">SCREEN</div>
+                  <div class="cinema-seat">
+                      <div class="seat">A1</div> <div class="seat">A2</div> <div class="seat">A3</div> <div class="seat">A4</div> <div class="seat">A5</div>
+                      <div class="seat">A6</div> <div class="seat">A7</div> <div class="seat">A8</div> <div class="seat">A9</div> <div class="seat">A10</div>
+                  </div>
+                  <div class="cinema-seat">
+                      <div class="seat">B1</div> <div class="seat">B2</div> <div class="seat">B3</div> <div class="seat">B4</div> <div class="seat">B5</div>
+                      <div class="seat">B6</div> <div class="seat">B7</div> <div class="seat">B8</div> <div class="seat">B9</div> <div class="seat">B10</div>
+                  </div>
+                  <div class="cinema-seat">
+                      <div class="seat">C1</div> <div class="seat">C2</div> <div class="seat">C3</div> <div class="seat">C4</div> <div class="seat">C5</div>
+                      <div class="seat">C6</div> <div class="seat">C7</div> <div class="seat">C8</div> <div class="seat">C9</div> <div class="seat">C10</div>
+                  </div>
+                  <div class="cinema-seat">
+                      <div class="seat">D1</div> <div class="seat">D2</div> <div class="seat">D3</div> <div class="seat">D4</div> <div class="seat">D5</div>
+                      <div class="seat">D6</div> <div class="seat">D7</div> <div class="seat">D8</div> <div class="seat">D9</div> <div class="seat">D10</div>
+                  </div>
+                  <div class="cinema-seat">
+                      <div class="seat">E1</div> <div class="seat">E2</div> <div class="seat">E3</div> <div class="seat">E4</div> <div class="seat">E5</div>
+                      <div class="seat">E6</div> <div class="seat">E7</div> <div class="seat">E8</div> <div class="seat">E9</div> <div class="seat">E10</div>
+                  </div>
+
+                  <br><br><br>
+
+                  <div class="cinema-seat">
+                      <div class="seat">F1</div> <div class="seat">F2</div> <div class="seat">F3</div> <div class="seat">F4</div> <div class="seat">F5</div>
+                      <div class="seat">F6</div> <div class="seat">F7</div> <div class="seat">F8</div> <div class="seat">F9</div> <div class="seat">F10</div>
+                  </div>
+                  <div class="cinema-seat">
+                      <div class="seat">G1</div> <div class="seat">G2</div> <div class="seat">G3</div> <div class="seat">G4</div> <div class="seat">G5</div>
+                      <div class="seat">G6</div> <div class="seat">G7</div> <div class="seat">G8</div> <div class="seat">G9</div> <div class="seat">G10</div>
+                  </div>
+                  <div class="cinema-seat">
+                      <div class="seat">H1</div> <div class="seat">H2</div> <div class="seat">H3</div> <div class="seat">H4</div> <div class="seat">H5</div>
+                      <div class="seat">H6</div> <div class="seat">H7</div> <div class="seat">H8</div> <div class="seat">H9</div> <div class="seat">H10</div>
+                  </div>
+                  <div class="cinema-seat">
+                      <div class="seat">I1</div> <div class="seat">I2</div> <div class="seat">I3</div> <div class="seat">I4</div> <div class="seat">I5</div>
+                      <div class="seat">I6</div> <div class="seat">I7</div> <div class="seat">I8</div> <div class="seat">I9</div> <div class="seat">I10</div>
+                  </div>
+                  <div class="cinema-seat">
+                      <div class="seat">J1</div> <div class="seat">J2</div> <div class="seat">J3</div> <div class="seat">J4</div> <div class="seat">J5</div>
+                      <div class="seat">J6</div> <div class="seat">J7</div> <div class="seat">J8</div> <div class="seat">J9</div> <div class="seat">J10</div>
+                  </div>
+              </div>  
+        </div>
+
+        <script>
+          const seats = document.querySelectorAll('.seat');
+
+          seats.forEach(seat => {
+            seat.addEventListener('click', () => {
+              seat.classList.toggle('selected');
+            });
+          });
+        </script>
+
+      
+
+    <div class="ticket-button">
+        <div class="previous-button">
+          <a href="javascript:void(0);" onclick="showSection('tix')"><button class="previous-btn">PREVIOUS</button></a>
+        </div>
+        <div class="next-button">
+          <a href="javascript:void(0);" onclick="showSection('details')"><button class="next-btn">NEXT</button></a>
+        </div>
+      </div>
+  </div>
+
+  <div id="details" class="content-section" style="display: none;">
+    <div class="details">
+      <h3>MANILA CINEMA</h3>
+      <h2>SNOW WHITE (2025)</h2>
+      <h4>May 15 14:30</h4>
+    </div>
+
+    <div class="personal-details">
+      <div class="personal-details-table">
+        <table>
+          <tr>
+            <th colspan="2" style="font-size: 25px;">PERSONAL DETAILS</th>
+          </tr>
+          <tr>
+            <td><label for="name">NAME</label></td>
+            <td><input type="text" placeholder="e.g., Juan de la Cruz"></td>
+        </tr>
+        <tr>
+            <td><label for="phone">PHONE NO</label></td>
+            <td><input type="tel" placeholder="+63 912 345 6789"></td>
+        </tr>
+        <tr>
+            <td><label for="email">EMAIL</label></td>
+            <td><input type="email" placeholder="example@gmail.com"></td>
+        </tr>
+        <tr>
+            <td><label for="confirm-email">CONFIRM EMAIL</label></td>
+            <td><input type="email"></td>
+        </tr>
+        </table>
+      </div>
+    </div>
+    <div class="ticket-button">
+      <div class="previous-button">
+        <a href="javascript:void(0);" onclick="showSection('seat')"><button class="previous-btn">PREVIOUS</button></a>
+      </div>
+      <div class="next-button">
+        <a href="Ticket_Reciept.html"><button class="next-btn">PROCEED TO PAYMENT</button></a>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="payment" class="content-section" style="display: none;">
+    <div class="payment-review">
+      <div class="confirmation">
+        <h1>PAYMENT CONFIRMED!</h1>
+        <p>Your payment has been successfully processed.</p>
+        <p>Thank you for booking with us! We look forward to seeing you at the cinema.</p>
+      </div>
+    </div>
+    <div class="ticket-button">
+      <div class="previous-button">
+        <a href="javascript:void(0);" onclick="showSection('details')"><button class="previous-btn">PREVIOUS</button></a>
+      </div>
+      <div class="next-button"></div>
+    </div>
+  </div>
+
+  <script>
+    // Function to switch between sections
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.content-section');
+      sections.forEach(section => {
+        section.style.display = 'none'; // Hide all sections
+      });
+
+      const selectedSection = document.getElementById(sectionId);
+      selectedSection.style.display = 'block'; // Show the selected section
+    }
+
+    // Initially show the 'tix' section
+    document.addEventListener('DOMContentLoaded', () => {
+      showSection('tix');
+    });
+  </script>
+
+    <!--footer-->
+    <div class = "footer"> <!--footer element \copy from here-->
+
+      <div class = "socials">
+  
+        <div class = "instagram">
+          <a href="#" target="_blank">
+            <img src="IMAGES/instagram-icon.png" alt="instagram-icon">
+          </a>
+        </div>
+  
+        <div class = "facebook">
+          <a href="#" target="_blank">
+            <img src = "IMAGES/facebook-icon.png" alt = "facebook-icon">
+          </a>
+        </div>
+  
+        <div class = "x">
+          <a href="#" target="_blank">
+            <img src = "IMAGES/x-icon.png" alt = "x-icon">
+          </a>
+        </div>
+  
+        <div class = "youtube">
+          <a href="#" target="_blank">
+            <img src = "IMAGES/youtube-icon.png" alt = "youtube-icon">
+          </a>
+        </div>
+  
+        <div class = "tiktok">
+          <a href="#" target="_blank">
+            <img src = "IMAGES/tiktok-icon.png" alt = "tiktok-icon">
+          </a>
+        </div>
+  
+      </div>
+  
+      <div class = "footer-contents">
+  
+        <div>
+          <div class = "about">
+            <a href="aboutus.html">ABOUT US</a>
+          </div>
+          <div class = "termsandconditions">
+            <a href="#">TERMS AND CONDITIONS</a>
+          </div>
+          <div class = "privacy policy">
+            <a href="#">PRIVACY POLICY</a>
+          </div>
+        </div>
+  
+        <div>
+          <div class = "cordonbleu-logo-footer">
+            <img src = "IMAGES/cordonbleu-logo.png">
+          </div>
+          <div class = "address">
+            <p>WE MAKE YOUR EVERY EXPERIENCE FIRST-CLASS</p>
+          </div>
+        </div>
+        
+        <div>
+          <div><a href="movie-list-soon.html">FILMS COMING SOON</a></div>
+          <div><a href="movie-list-show.html">FILMS NOW SHOWING</a></div>
+          <div><a href="imax_final.html">IMAX</a></div>
+          <div><a href="vip-movies.html">VIP</a></div>
+        </div>
+  
+      </div>
+  
+      <div class = "copyright">
+        <div>
+          <p>&copy; 2025 Cordon Bleu Cinemas</p>
+        </div>
+      </div>
+  
+    </div>
+</body>
+</html>

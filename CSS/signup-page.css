@@ -1,0 +1,168 @@
+
+.signin-section {
+    position: relative;
+}
+
+.signin-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+
+    /* Optional gradient fade */
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
+.signin-container {
+    position: relative;
+    z-index: 1;
+    
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.signin-box {
+    background: rgba(255, 255, 255, 0.2);
+    color: black;
+    width: clamp(250px, 22.22vw, 400px);
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    min-height: 220px;
+    margin-top: clamp(30px, 3vw, 2.5rem);
+   
+}
+.signin-box h2{
+    color: white;
+    z-index: 10;
+    font-size: clamp(5px, 3vw, 20px);
+}
+.signin-box h3{
+    color: white;
+    z-index: 10;
+}
+.signin-box p{
+    color: white;
+    font-size: 12px;
+    z-index: 10;
+}
+.email-input{
+    border: 1px solid white;
+    z-index: 10;
+
+}
+.email-bar {
+    display: flex;
+    justify-content: left;
+    position: relative; 
+    margin-top: 0.688rem;
+  }
+  
+.email-bar input {
+    background: transparent;
+    outline: none;
+    border: none;
+    width: 13rem;
+    border-bottom: 1px solid white;
+    color: white;
+    padding-left: 0.5rem;
+}
+.password-bar {
+    display: flex;
+    justify-content: left;
+    position: relative; 
+    margin-top: 0.688rem;
+}
+  
+.password-bar input {
+    background: transparent;
+    outline: none;
+    border: none;
+    width: 13rem;
+    border-bottom: 1px solid white;
+    color: white;
+    padding-left: 0.5rem;
+}
+.keep-signedin{
+    border: 1px solid white;
+    border-radius: 10px;
+    width: clamp(110px, 40%, 300px);
+    margin-top: 30px;
+    text-align: center;
+    padding: 5px;
+    
+}
+.forgot-password{
+    border: 1px solid white;
+    border-radius: 10px;
+    width: clamp(120px, 45%, 300px);
+    margin-top: 10px;
+    text-align: center;
+    padding: 5px;
+}
+.sign-in-button{
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    padding: 5px;
+    z-index: 10;
+    background: rgb(63, 63, 199);
+}
+
+.sign-in-button img{
+    width: 20px;
+    height: 20px;
+    opacity: 100%;
+    z-index: 100;
+}
+ 
+.signin-box h4{
+    margin-top: 10px;
+    color: white;
+    z-index: 10;
+}
+
+.signup-button{
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    padding: 5px;
+    z-index: 10;
+
+    
+}
+.signup-button a{
+    text-decoration: none;
+
+
+}
+
+.signup-button h5{
+
+    color: white;
+
+}
+
+.border{
+    border: 10px solid white;
+}
+
+.signup-margin{
+    margin-top: clamp(2rem, 15vw, 6rem);
+    
+}

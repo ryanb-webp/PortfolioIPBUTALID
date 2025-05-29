@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Navigation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #181818;
+            color: white;
+        }
+
+        .step {
+            display: none; /* Hide all steps initially */
+        }
+
+        .step:target {
+            display: block; /* Show the targeted step */
+        }
+
+        .progress {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .progress div {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 10px;
+            color: black;
+            font-weight: bold;
+        }
+
+        .progress-a{
+            background-color: gray;
+        }
+
+        .progress-b{
+            background-color: rgb(193, 48, 48);
+        }
+
+        .progress-c{
+            background-color: gray;
+            border: 1px solid white;
+        }
+
+        .buttons {
+            margin-top: 5px;
+        }
+
+        .buttons a {
+            text-decoration: none;
+            color: white;
+            background-color: red;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 10px;
+            display: inline-block;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div id="step1">
+        <div class="progress">
+            <div class="progress-c">1</div>
+            <div class="progress-a">2</div>
+            <div class="progress-a">3</div>
+            <div class="progress-a">4</div>
+        </div>
+        <section class="container">
+            <h2>Step 1: Select Tickets</h2>
+            <div class="buttons">
+                <a href="#step2">Next</a>
+            </div>
+        </section>
+    </div>
+
+    <div id="step2" class="step">
+        <div class="progress">
+            <div class="progress-b">1</div>
+            <div class="progress-c">2</div>
+            <div class="progress-a">3</div>
+            <div class="progress-a">4</div>
+        </div>
+        <section class="container">
+            <h2>Step 2: Select Seats</h2>
+            <div class="buttons">
+                <a href="#step1">Back</a>
+                <a href="#step3">Next</a>
+            </div>
+        </section>
+    </div>
+    
+    <div id="step3" class="step">
+        <div class="progress">
+            <div class="progress-b">1</div>
+            <div class="progress-b">2</div>
+            <div class="progress-c">3</div>
+            <div class="progress-a">4</div>
+        </div>
+        <section class="container">
+            <h2>Step 3: Enter Details</h2>
+            <div class="buttons">
+                <a href="#step2">Back</a>
+                <a href="#step4">Next</a>
+            </div>
+        </section>
+    </div>
+
+    <div id="step4" class="step">
+        <div class="progress">
+            <div class="progress-b">1</div>
+            <div class="progress-b">2</div>
+            <div class="progress-b">3</div>
+            <div class="progress-c">4</div>
+        </div>
+        <section class="container">
+            <h2>Step 4: Review Cart</h2>
+            <div class="buttons">
+                <a href="#step3">Back</a>
+                <a href="#step5">Submit</a>
+            </div>
+        </section>
+    </div>
+
+    <div id="step5" class="step">
+        <section class="container">
+            <h2>Booking Complete</h2>
+            <h3>Thank you for your patronage</h3>
+            <div class="buttons">
+                <a href="#step1">Home</a>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
